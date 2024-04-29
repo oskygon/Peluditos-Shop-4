@@ -194,6 +194,42 @@
  color:var(--color-secundario);
  font-weight:bold;
   }
+  /*Ofertas*/
+  .container-ofertas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(25% - 20px); /* 25% del ancho del contenedor menos el espacio entre las tarjetas */
+    max-height: 45vh;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid var(--color-secundario);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
+
+
+.card-text {
+    margin-top: 10px;
+    text-align: center; 
+}
+
+.ofertas , .ofer-sem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 
      
