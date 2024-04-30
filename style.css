@@ -186,10 +186,11 @@
  } 
  .frase-hero{
     color: var(--color-primario);
-    font-size: 2em;
+    font-size: 3em;
     padding-top: 200px;
     padding-left: 100px;
  }
+
 
  /*Main*/
  .carousel {
