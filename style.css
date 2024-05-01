@@ -230,6 +230,41 @@
     align-items: center;
 }
 
+/*alimento-perro*/
+
+#contenido-alimento-perro {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+ .tarjeta{
+ width: calc(25% - 20px); /* 25% del ancho del contenedor menos el espacio entre las tarjetas */
+  max-height: 45vh;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid var(--color-secundario);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.tarjeta img {
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  display: block;
+  
+}
+
+
+
+.tarjeta-text {
+  margin-top: 10px;
+  text-align: center; 
+}
+
+
+
 
 
      
@@ -344,4 +379,71 @@
     padding-top: 30px;
   }
  
- 
+ /*Nosotros */
+
+ .container {
+  width: 300px;
+  display: flex;
+  flex-direction: rom;
+ }
+ .tarjeta-sobre-mi > img {
+  width: 300px;
+  height:200px;
+  border-radius: 12px;
+ }
+
+ .tarjeta-sobre-mi{
+  border: 1px solid  #0c0b0a;
+
+ }
+ #hero{
+  font-size: 24px;
+  font-weight: 12;
+  color: white;
+  
+  
+ }
+ /*formulario*/
+ body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form label,
+form input,
+form textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+h1{
+  text-align: center;
+}
+
