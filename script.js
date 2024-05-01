@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     let slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
-    let slideInterval = setInterval(nextSlide, 5000); // Cambia la imagen cada 3 segundos (3000 milisegundos)
+    let slideInterval = setInterval(nextSlide, 5000); // Cambia la imagen cada 5 segundos (5000 milisegundos)
 
     function nextSlide() {
         slides[currentSlide].classList.remove('active');
@@ -65,4 +65,41 @@ document.addEventListener("DOMContentLoaded", function() {
         loadCards();
     });
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const apiKey = "live_LlSgQwRpWgVPpEpOsNcCPwDX3RSRFaz16ls4AMrJxMeCSLcXhFpSK3WqujpmxpB5";
+    const dogImage = document.getElementById("dog-image");
+
+    // Función para obtener una imagen de perro aleatoria
+    function getNewDogImage() {
+        fetch("https://api.thecatapi.com/v1/images/search?limit=10", {
+            headers: {
+                "x-api-key": apiKey
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Obtener la URL de la imagen
+            const imageUrl = data[0].url;
+            // Establecer la URL de la imagen
+            dogImage.src = imageUrl;
+            // Establecer el tamaño deseado de la imagen
+            dogImage.style.width = "300px"; // Ancho deseado
+            dogImage.style.height = "200px"; // Alto deseado
+        })
+        .catch(error => {
+            console.error("Error fetching dog image:", error);
+        });
+    }
+
+    // Obtener una imagen de perro aleatoria cada 5 segundos
+    setInterval(getNewDogImage, 5000);
+
+    // Obtener una imagen de perro aleatoria al cargar la página
+    getNewDogImage();
+});
+
 
