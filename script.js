@@ -250,27 +250,27 @@ function inicializar(animal) {
 
             { imageUrl: './img/img-caninos/Vitalcan.jpg', text1: 'Vitalcan Balanceado Ad.X 3Kg', text2: '$13.800', text3: 'Envios a domicilio sin cargo' },
 
-            { imageUrl: './img/img-caninos/Yenu.jpg', text1: 'Yenu Alimento para Cachorros  Ad.X 10 Kg', text2: '$48.400', text3: 'Envios a domicilio sin cargo' },
+            { imageUrl: './img/img-caninos/Yenu.jpg', text1: 'Yenu Alimento Perros  Ad.X 10 Kg', text2: '$48.400', text3: 'Envios a domicilio sin cargo' },
 
-            { imageUrl: './img/img-caninos/Simpli.jpg', text1: 'Simpli Alimento para Perro Ad.X 15 Kg', text2: '$42.200', text3: 'Envios a domicilio sin cargo' },
+            { imageUrl: './img/img-caninos/Simpli.jpg', text1: 'Simpli Alimento  Perro Ad.X 15 Kg', text2: '$42.200', text3: 'Envios a domicilio sin cargo' },
 
-            { imageUrl: './img/img-caninos/Eukanuba.jpg', text1: 'Eukanuba Perro Adulto Ad.X 3Kg', text2: '$15.200', text3: 'Envios a domicilio sin cargo' },
+            { imageUrl: './img/img-caninos/Eukanuba.jpg', text1: 'Eukanuba  Adulto Ad.X 3Kg', text2: '$15.200', text3: 'Envios a domicilio sin cargo' },
         ], "alimento-gato": [
             { imageUrl: './img/img-felinos/bel-cat.jpg', text1: 'Alimento belcat Ad. 10 Kg', text2: '$15.361', text3: 'Envios a domicilio sin cargo' },
 
             { imageUrl: './img/img-felinos/canin-club.jpg', text1: 'Royal Canin Club Ad. X 7.5Kg', text2: '$39.400', text3: 'Envios a domicilio sin cargo' },
 
-            { imageUrl: './img/img-felinos/canin-veterinary.jpg', text1: 'Royal Canin Veterinary Ad. 20Kg', text2: '$62.764', text3: 'Envios a domicilio sin cargo' },
+            { imageUrl: './img/img-felinos/canin-veterinary.jpg', text1: 'Royal Canin Vet Ad. 20Kg', text2: '$62.764', text3: 'Envios a domicilio sin cargo' },
 
             { imageUrl: './img/img-felinos/complete.jpg', text1: 'Vital Can Complete Ad. X 15 Kg', text2: '$25.980', text3: 'Envios a domicilio sin cargo' },
 
-            { imageUrl: './img/img-felinos/criadores.jpg', text1: 'Maintenance Criadores Ad X 15Kg', text2: '$36.400', text3: 'Envios a domicilio sin cargo' },
+            { imageUrl: './img/img-felinos/criadores.jpg', text1: ' Criadores Ad X 15Kg', text2: '$36.400', text3: 'Envios a domicilio sin cargo' },
 
             { imageUrl: './img/img-felinos/monami.jpg', text1: 'Mom Ami Alimentos Ad. X 7 Uni', text2: '$49.590', text3: 'Envios a domicilio sin cargo' },
 
             { imageUrl: './img/img-felinos/old-prince-adulto.jpg', text1: 'Old Prince Adulto Ad 20Kg', text2: '$54.636', text3: 'Envios a domicilio sin cargo' },
 
-            { imageUrl: './img/img-felinos/premium-mix.jpg', text1: 'Vitalcan Primium Mix Ad.X 705Kg', text2: '$24.500', text3: 'Envios a domicilio sin cargo' },
+            { imageUrl: './img/img-felinos/premium-mix.jpg', text1: 'Vitalcan Primium  Ad.X 705Kg', text2: '$24.500', text3: 'Envios a domicilio sin cargo' },
 
             { imageUrl: './img/img-felinos/purina.jpg', text1: 'Purina Ad.X 3Kg', text2: '$40.830', text3: 'Envios a domicilio sin cargo' },
 
@@ -306,7 +306,7 @@ function inicializar(animal) {
 
             { imageUrl: './img/img-ac-perro/campera-perro.jpg', text1: 'Campera Chaleco', text2: '$15.764', text3: 'Envios a domicilio sin cargo' },
 
-            { imageUrl: './img/img-ac-perro/chaleco.jpg', text1: ' Abrigo Chaleco Friza para Perros ', text2: '$16.400', text3: 'Envios a domicilio sin cargo' },
+            { imageUrl: './img/img-ac-perro/chaleco.jpg', text1: ' Abrigo Chaleco Friza Perros ', text2: '$16.400', text3: 'Envios a domicilio sin cargo' },
 
             { imageUrl: './img/img-ac-perro/collar.jpg', text1: 'Collar para Mascotas Clasico', text2: '$11.400', text3: 'Envios a domicilio sin cargo' },
 
