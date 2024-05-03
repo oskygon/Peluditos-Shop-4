@@ -131,7 +131,7 @@ footer.innerHTML = `
 document.addEventListener("DOMContentLoaded", function() {
     let slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
-    let slideInterval = setInterval(nextSlide, 5000); // Cambia la imagen cada 3 segundos (3000 milisegundos)
+    let slideInterval = setInterval(nextSlide, 5000); // Cambia la imagen cada 5 segundos (5000 milisegundos)
 
     function nextSlide() {
         slides[currentSlide].classList.remove('active');
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { imageUrl: './img/slieger.png', text1: 'Sieger Perro Criadores X 20 Kg', text2: '$64.821', text3: 'Envios a domicilio sin cargo' },
         { imageUrl: './img/royal caning.png', text1: 'Royal Canin Perro Ad. X 15 Kg', text2: '$66.603', text3: 'Envios a domicilio sin cargo' },
         { imageUrl: './img/selection.png', text1: 'Dog Selection Cachorro 21+3 Kg', text2: '$54.636', text3: 'Envios a domicilio sin cargo' },
-        { imageUrl: './img/dogchow.png', text1: 'Dog Chow S/ Colorante Ad.X 21 Kg', text2: '$39.503', text3: 'Envios a domicilio sin cargo' },
+        { imageUrl: './img/dogchow.png', text1: 'Dog Chow S/Col Ad.X 21 Kg', text2: '$39.503', text3: 'Envios a domicilio sin cargo' },
        
     ];
     
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function() {
             textDiv.classList.add('card-text');
             textDiv.innerHTML = `
                 <p>${cardData.text1}</p>
-                <p>${cardData.text2}</p>
+                <h3>${cardData.text2}</h3>
                 <p>${cardData.text3}</p>
             `;
             card.appendChild(textDiv);
@@ -195,10 +195,6 @@ document.addEventListener("DOMContentLoaded", function() {
         loadCards();
     });
 });
-
-function a() {
-    alert("funciona");
-}
 
 function inicializar(animal) {
     return () => {
@@ -330,3 +326,36 @@ document.addEventListener("DOMContentLoaded", inicializar("alimento-gato"));
 document.addEventListener("DOMContentLoaded", inicializar("alimento-perro"));
 document.addEventListener("DOMContentLoaded", inicializar("accesorio-gato"));
 document.addEventListener("DOMContentLoaded", inicializar("accesorio-perro"));
+
+document.addEventListener("DOMContentLoaded", function() {
+    const apiKey = "live_LlSgQwRpWgVPpEpOsNcCPwDX3RSRFaz16ls4AMrJxMeCSLcXhFpSK3WqujpmxpB5";
+    const dogImage = document.getElementById("dog-image");
+
+    // Función para obtener una imagen de perro aleatoria
+    function getNewDogImage() {
+        fetch("https://api.thecatapi.com/v1/images/search?limit=10", {
+            headers: {
+                "x-api-key": apiKey
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Obtener la URL de la imagen
+            const imageUrl = data[0].url;
+            // Establecer la URL de la imagen
+            dogImage.src = imageUrl;
+            // Establecer el tamaño deseado de la imagen
+            dogImage.style.width = "300px"; // Ancho deseado
+            dogImage.style.height = "200px"; // Alto deseado
+        })
+        .catch(error => {
+            console.error("Error fetching dog image:", error);
+        });
+    }
+
+    // Obtener una imagen de perro aleatoria cada 5 segundos
+    setInterval(getNewDogImage, 5000);
+
+    // Obtener una imagen de perro aleatoria al cargar la página
+    getNewDogImage();
+});
