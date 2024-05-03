@@ -232,23 +232,33 @@
 
 /*alimento-perro*/
 
-#contenido-alimento-perro {
+div.fila {
   display: flex;
-  flex-wrap: wrap;
 }
+
 
 
  .tarjeta{
  width: calc(25% - 20px); /* 25% del ancho del contenedor menos el espacio entre las tarjetas */
   max-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 10px;
   padding: 20px;
   border: 1px solid var(--color-secundario);
   box-sizing: border-box;
   border-radius: 10px;
+  align-items: center;
+}
+
+.tarjeta-text p:nth-child(2) {
+  text-align: center;
 }
 
 .tarjeta img {
+  width: 80%;
+ 
   justify-content: center;
   align-items: center;
   height: 80%;
@@ -258,22 +268,12 @@
 
 
 
-.tarjeta-text {
+.tarjeta-text{
   margin-top: 10px;
   text-align: center; 
 }
 
-
-
-
-
-     
-
-
-
-
-
-/* Footer */
+ /* Footer */
 
   .contenedor-foot{
     display: flex;
@@ -382,68 +382,108 @@
  /*Nosotros */
 
  .container {
-  width: 300px;
-  display: flex;
-  flex-direction: rom;
+  width: 100%;
+ display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  grid-column-gap: 20px ;
+  padding: 10px 10px 10px 10px;
+ 
  }
  .tarjeta-sobre-mi > img {
-  width: 300px;
+  width: 100%;
   height:200px;
-  border-radius: 12px;
+  border: 1px solid red;
  }
 
  .tarjeta-sobre-mi{
   border: 1px solid  #0c0b0a;
+  border-radius: 6%;
+  }
 
- }
+
+  .tarjeta-texto{
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  
+ /*---------*/
+
+
  #hero{
   font-size: 24px;
   font-weight: 12;
   color: white;
-  
-  
- }
+  }
+
+
  /*formulario*/
- body {
-  font-family: Arial, sans-serif;
-}
-
-.container {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form label,
-form input,
-form textarea {
-  display: block;
-  margin-bottom: 10px;
-}
-
-form input,
-form textarea {
+ .contenido-formulario {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 50px;
+  margin-top: 90px;
+ }
+ .contenido-formulario h2{
+  margin-bottom: 15px;
+  font-size: 34px;
+  }
 
-form input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
+  .contenido-formulario p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 34px;
+  }
+   .contenido-formulario a {
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #0c0b0a;
+    font-weight: 700;
 
-form input[type="submit"]:hover {
-  background-color: #45a049;
-}
-h1{
-  text-align: center;
-}
+   }
+   .contenido-formulario a i {
+    color: orange;
+    margin-right: 10px;
+   }
 
+   .contenido-formulario form .campo, textarea{
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #dbdbdb;
+    margin-top: 20px;
+    border: 3px;
+    outline: 0px;
+   }
+
+   .contenido-formulario form textarea {
+    max-width: 530px;
+    min-width: 530;
+    min-height: 140px;
+    min-height: 150px;
+   }
+   .contenido-formulario .btn-enviar {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background: orange;
+    color: white;
+    border-radius:3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+   }
+
+   .contenido-formulario .btn-enviar:hover{
+    background: #e39403;
+   }
