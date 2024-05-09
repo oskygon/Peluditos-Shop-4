@@ -1,131 +1,123 @@
 const nav = document.querySelector("nav");
 const footer = document.querySelector("footer");
 
+
+
+//---------Barra de navegación----------
 nav.innerHTML=`  
-<div class="menuBar">
- <h1 class="logo"> <i class="fa-solid fa-paw fa-lg" style="color: #eaeff3;"></i>
-   Peluditos <span>Shop</span></h1>
-   <div>
-       <form>
-           <input class="input-busqueda" type="search" placeholder="Buscar" aria-label="Search">
-           <button class="btn-busqueda" type="submit"><a href="">Buscar</a></button>
-         </form>
-       </div>
+        <div class="topnav" id="myTopnav">
+        <a class="logo"> <i class="fa-solid fa-paw fa-sm"></i>Peluditos Shop</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
+        <a href="#home">Home</a>
+        <a href="#nosotros">Nosotros</a>
+          <div class="dropdown">
+             <button class="dropbtn">Productos
+             <i class="fa fa-caret-down"></i>
+             </button>
+            <div class="dropdown-content">
+            <a href="#">Alimentos</a>
+            <a href="#">Accesorios</a>
+            </div>
+         </div>
+        <div class="dropdown">
+            <button class="dropbtn">Servicios
+            <i class="fa fa-caret-down"></i>
+            </button>
+          <div class="dropdown-content">
+            <a href="#">Baños</a>
+            <a href="#">Paseos</a>
+            <a href="#">Peluquería</a>
+            <a href="#">Veterinaria</a>
+          </div>
+        </div>
+     <div class="iconos-three">
+        <div>
+        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a></div>
+        <div><a href=""><i class="fa-solid fa-user"></i></a></div>
+       <div> <a href=""><i class="fa-solid fa-cart-shopping"></i></a></div>
+        </div>
+      </div>
+      </div>`;
 
- <ul>
-   <li><a href="index.html">Home</a></li>
-   <li><a href="nosotros.html">Nosotros</a></li>
-   <li><a href="#">Productos <i class="fas fa-caret-down"></i></a>
+      //---------Footer----------
 
-       <div class="drop-down-menu">
-           <ul>
-               <li>
-                   <a href="#">Alimentos <i class="fas fa-caret-right"></i></a>
-                   
-                   <div class="drop-down-menu-1">
-                       <ul>
-                           <li><a href="caninos.html">Caninos</a></li>
-                           <li><a href="felinos.html">Felinos</a></li>
-                           
-                       </ul>
-                   </div>
-               </li>
-               <li>
-                   <a href="felinos.html">Accesorios <i class="fas fa-caret-right"></i></a>
-                   
-                   <div class="drop-down-menu-1">
-                       <ul>
-                           <li><a href="accesorio-perro.html">Caninos</a></li>
-                           <li><a href="accesorio-gato.html">Felinos</a></li>
-                           
-                       </ul>
-                   </div>
-               </li>
-               
-           </ul>
-       </div>
-   </li>
-   <li><a href="servicios.html">Servicios<i class="fas fa-caret-down"></i></a>
-       <div class="drop-down-menu">
-           <ul>
-               <li><a href="#">Baños</a></li>
-               <li><a href="#">Peluquería</a></li>
-               <li><a href="#">Paseos</a></li>
-               <li><a href="#">Veterinaria</a></li>
-               <li>
-               </ul>
-           </li>
-       
-           <li><a href="#">Clientes<i class="fas fa-caret-right"></i></a>
-               <div class="drop-down-menu">
-                   <ul>
-                       <li><a href="#">Mi cuenta</a></li>
-                       <li><a href="#">Mis compras</a></li>
-                      
-                       <li>
-                       </ul>
-           </li>
-   <li><a href="#promos">Promos</a></li>
-   <li><a href="#footer">Contacto</a></li>
- </ul>
-</div>`;
+      footer.innerHTML = `
+      <footer class="pie">
+      <div class="header-foot">
+          <div class="logo">
+              <a class="logo"> <i class="fa-solid fa-paw fa-sm"></i>Peluditos Shop</a>
+          </div>
+          <div class="redes">
+              <span class="fb"><i class="fa-brands fa-facebook"></i></span>
+              <span class="tw"><i class="fa-brands fa-twitter"></i></span>
+              <span class="in"><i class="fa-brands fa-instagram"></i></span>
+              <span class="wh"><i class="fa-brands fa-whatsapp"></i></span>
+             
 
-footer.innerHTML = ` 
-<section class="foot contenedor-foot red" id="foot">
-<div class="logo-foot">
-    <h3 class="logo"> <i class="fa-solid fa-paw fa-lg" style="color: #eaeff3;"></i>
-    Peluditos <span>Shop</span></h3>
-</div>
-
-<div class="nosotros">
-    <h6>Nosotros</h6>
-    <p><a href="nosotros.html">Quienes somos</a></p>
-    <p><a href="">Puntos de retiro</a></p>
-    <p><a href="">Delivery</a></p>
-    <p><a href="contacto.html">Contacto</a></p>
-</div>
-<div class="productos">
-    <h6>Productos</h6>
-    <p><a href="caninos.html">Alimentos para perros</a></p>
-    <p><a href="felinos.html">Alimentos para gatos</a></p>
-    <p><a href="accesorio-perro.html">Accesorios para perros</a></p>
-    <p><a href="accesorio-gato.html">Accesorios para gatos</a></p>
-</div>
-<div class="servicios">
-    <h6>Servicios</h6>
-    <p><a href="">Baños</a></p>
-    <p><a href="">Paseos</a></p>
-    <p><a href="">Peluquería</a></p>
-    <p><a href="">Veterinaria</a></p>
-</div>
-<div class="clientes">
-    <h6>Clientes</h6>
-    <p><a href="">Mi cuenta</a></p>
-    <p><a href="">Mis pedidos</a></p>
-    <p><a href="">Cancelar compra</a></p>
-    <p><a href="">Términos y condiciones</a></p>
-
-</div>
-<div class="redes-pay ">
-    <div class="seguinos">
-        <h6>Seguinos</h6>
-        <a href=""><i class="facebook"><img src="img/icons8-facebook-rodeado-de-círculo-32.png" alt="facebook"></i></a>
-        <a href=""><i class="instagram"><img src="img/icons8-instagram-32.png" alt="instagram"></i></a>
-        <a href=""><i class="twitter"><img src="img/icons8-logo-de-twitter-32.png" alt="twitter"></i></a>
-        <a href=""><i class="whatsapp"><img src="img/icons8-whatsapp-32.png" alt="whatsapp"></i></a>
+          </div>
+      </div>
+      <hr>
+      <div class="section">
+          <div>
+              <h2>Nosotros</h2>
+              <a href="#">Quienes somos</a>
+              <a href="#">Puntos de venta</a>
+              <a href="#">Delivery</a>
+              <a href="#">Contacto</a>
+          </div>
+          <div>
+              <h2>Productos</h2>
+              <a href="#">Alimentos para perros</a>
+              <a href="#">Alimentos para gatos</a>
+              <a href="#">Accesorios para perros</a>
+              <a href="#">Accesorios para gatos</a>
+          </div>
+          <div>
+              <h2>Servicios</h2>
+              <a href="#">Baños</a>
+              <a href="#">Paseos</a>
+              <a href="#">Peluquería</a>
+              <a href="#">Veterinaria</a>
+          </div>
+          <div>
+              <h2>Clientes</h2>
+              <a href="#">Mi cuenta</a>
+              <a href="#">Mis pedidos</a>
+              <a href="#">Cancelar compra</a>
+              <a href="#">Términos y condiciones</a>
+          </div>
+          <div>
+              <h2>Registrate</h2>
+              <form action="">
+                  <input type="text" placeholder="Ingresá tu Email">
+                  <button type="submit">Registrate</button>
+              </form>
+          </div>
+      </div>
+      <div class="derechos">
+          <p>Copyright CaC©2024 - Todos los derechos reservados</p>
      
-    </div>
-    <div class="forma-pago">
-        <h6>Formas de pago</h6>
-        <i class="visa"><img src="img/icons8-visa-32.png" alt="tarjeta visa"></i>
-        <i class="mastercard"><img src="img/icons8-tarjeta-mastercard-32.png" alt="tarjeta mastercard"></i>
-        <i class="amex"><img src="img/icons8-amex-32.png" alt="amex"></i>
-        <i class="mercadopago"><img src="img/icons8-mercado-pago-32.png" alt="mercadopago"></i>
-        <p class="efectivo-transf">Efectivo - Transferencia bancaria</p>
-    </div>
-</div>
+      </div>
+  </footer>`;
 
-</section>`
+
+
+
+
+
+
+function toggleMenu() {
+    var x = document.getElementById("myTopnav");
+    var icon = document.querySelector(".icon i");
+   
+    if (x.className === "topnav") {
+        x.className += " responsive";
+        icon.className = "fa fa-times"; // Cambia el icono a 'x'
+    } else {
+        x.className = "topnav";
+        icon.className = "fa fa-bars"; // Cambia el icono de vuelta a hamburguesa
+    }
+}
 
 
 document.addEventListener("DOMContentLoaded", function() {
