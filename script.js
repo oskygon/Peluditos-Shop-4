@@ -80,7 +80,7 @@ footer.innerHTML = `
 <div class="nosotros">
     <h6>Nosotros</h6>
     <p><a href="nosotros.html">Quienes somos</a></p>
-    <p><a href="">Puntos de retiro</a></p>
+    <p><a href="punto.html">Puntos de retiro</a></p>
     <p><a href="">Delivery</a></p>
     <p><a href="contacto.html">Contacto</a></p>
 </div>
