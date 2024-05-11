@@ -6,7 +6,7 @@ const footer = document.querySelector("footer");
 //---------Barra de navegación----------
 nav.innerHTML=`  
         <div class="topnav" id="myTopnav">
-        <a class="logo"> <i class="fa-solid fa-paw fa-sm"></i>Peluditos Shop</a>
+        <a class="logo"> <i class="fa-solid fa-paw fa-sm pata-nav"></i>Peluditos Shop</a>
         <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
         <a href="#home">Home</a>
         <a href="#nosotros">Nosotros</a>
@@ -42,63 +42,76 @@ nav.innerHTML=`
       //---------Footer----------
 
       footer.innerHTML = `
-      <footer class="pie">
-      <div class="header-foot">
-          <div class="logo">
-              <a class="logo"> <i class="fa-solid fa-paw fa-sm"></i>Peluditos Shop</a>
-          </div>
-          <div class="redes">
-              <span class="fb"><i class="fa-brands fa-facebook"></i></span>
-              <span class="tw"><i class="fa-brands fa-twitter"></i></span>
-              <span class="in"><i class="fa-brands fa-instagram"></i></span>
-              <span class="wh"><i class="fa-brands fa-whatsapp"></i></span>
-             
+      <footer">
+    <div class="div1"><h3 class="logo"> <i class="fa-solid fa-paw fa-sm"></i>
+     <h3>Peluditos Shop</h3>
+    </div>
+    <div class="div0">
+            
+           <div class="div2">
+            <h4>Nosotros</h4>
+                <p><a href="">Quienes somos</a></p>
+                <p><a href="">Puntos de retiro</a></p>
+                <p><a href="">Delivery</a></p>
+                <p><a href="">Contacto</a></p>
+           </div>
 
-          </div>
-      </div>
-      <hr>
-      <div class="section">
-          <div>
-              <h2>Nosotros</h2>
-              <a href="#">Quienes somos</a>
-              <a href="#">Puntos de venta</a>
-              <a href="#">Delivery</a>
-              <a href="#">Contacto</a>
-          </div>
-          <div>
-              <h2>Productos</h2>
-              <a href="#">Alimentos para perros</a>
-              <a href="#">Alimentos para gatos</a>
-              <a href="#">Accesorios para perros</a>
-              <a href="#">Accesorios para gatos</a>
-          </div>
-          <div>
-              <h2>Servicios</h2>
-              <a href="#">Baños</a>
-              <a href="#">Paseos</a>
-              <a href="#">Peluquería</a>
-              <a href="#">Veterinaria</a>
-          </div>
-          <div>
-              <h2>Clientes</h2>
-              <a href="#">Mi cuenta</a>
-              <a href="#">Mis pedidos</a>
-              <a href="#">Cancelar compra</a>
-              <a href="#">Términos y condiciones</a>
-          </div>
-          <div>
-              <h2>Registrate</h2>
-              <form action="">
-                  <input type="text" placeholder="Ingresá tu Email">
-                  <button type="submit">Registrate</button>
-              </form>
-          </div>
-      </div>
-      <div class="derechos">
-          <p>Copyright CaC©2024 - Todos los derechos reservados</p>
-     
-      </div>
-  </footer>`;
+          <div class="div3">
+            <h4>Productos</h4>
+                <p><a href="">Alimentos para perros</a></p>
+                <p><a href="">Alimentos para gatos</a></p>
+                <p><a href="">Accesorios para perros</a></p>
+                <p><a href="">Accesorios para gatos</a></p>
+            </div>
+
+          <div class="div4">
+            <h4>Servicios</h4>
+               <p><a href="">Baños</a></p>
+               <p><a href="">Paseos</a></p>
+               <p><a href="">Peluquería</a></p>
+               <p><a href="">Veterinaria</a></p>
+         </div>
+
+        <div class="div5">
+            <h4>Clientes</h4>
+                <p><a href="">Mi cuenta</a></p>
+                <p><a href="">Mis pedidos</a></p>
+                <p><a href="">Cancelar compra</a></p>
+                <p><a href="">Términos y condiciones</a></p>
+            </div>
+
+        <div class="div6">
+            <div class="seguinos">
+                <h4>Seguinos</h4>
+                <div>
+                <a href=""><i class="facebook"><img src="img/icons8-facebook-rodeado-de-círculo-32.png" alt="facebook"></i></a>
+                <a href=""><i class="instagram"><img src="img/icons8-instagram-32.png" alt="instagram"></i></a>
+                <a href=""><i class="twitter"><img src="img/icons8-logo-de-twitter-32.png" alt="twitter"></i></a>
+                <a href=""><i class="whatsapp"><img src="img/icons8-whatsapp-32.png" alt="whatsapp"></i></a>
+                </div>
+            </div>
+             
+            <div class="forma-pago">
+                <h4>Formas de pago</h4>
+                <div>
+                <i class="visa"><img src="img/icons8-visa-32.png" alt="tarjeta visa"></i>
+                <i class="mastercard"><img src="img/icons8-tarjeta-mastercard-32.png" alt="tarjeta mastercard"></i>
+                <i class="amex"><img src="img/icons8-amex-32.png" alt="amex"></i>
+                <i class="mercadopago"><img src="img/icons8-mercado-pago-32.png" alt="mercadopago"></i>
+                <i class="maestro"><img src="img/icons8-maestro-32 (1).png" alt="maestro"></i>
+                <i class="discover"><img src="img/icons8-discover-32.png" alt="discover"></i>
+                <p class="efectivo-transf">Efectivo - Transferencia bancaria</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+     <div class="div7">
+        <p>Copyright CaC ©2024 - Todos los derechos reservados</p>
+
+     </div>
+        
+    </footer>`;
 
 
 
