@@ -33,6 +33,7 @@
     justify-content:flex-start;
     align-items:start;
     flex-direction: column;
+  
 
 }
  .div2, .div3, .div4, .div5, a{
@@ -47,7 +48,7 @@ text-decoration: none;
 .div6{
     display: flex;
     justify-content:flex-start;
-    align-items:self-start;
+    align-items:start;
     flex-direction: column;
 }
  
@@ -56,14 +57,14 @@ text-decoration: none;
     justify-content:flex-start;
     align-items:start;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .forma-pago{
     display: flex;
     justify-content:flex-start;
     align-items:start;
     flex-direction: column;
-    margin-top: 20px
+  
 }
 
 @media screen and (max-width: 890px) {

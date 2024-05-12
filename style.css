@@ -24,17 +24,17 @@
       
     } */
     body {
-      font-family:"Monserrat", sans-serif;
+      font-family:"Poppins", sans-serif;
    
    
      
     }
 
-  .contenedor{
-    min-height: 100vh;
+  /* .contenedor{
+    min-height:auto;
     width: 100%;
     padding: 30px 0;
-}
+} */
 /* Colores */
 .red{
     color:var(--color-primario);
@@ -50,15 +50,8 @@
     font-size: 30px;
   }
   
-  .logo span {
-    transition: 1s;
-  }
-  .input-busqueda{
-    border-radius: 4px;
-    height: 36px;
-    padding-left: 5px;
-  }
 
+ 
 
   .button {
     display: inline-block;
@@ -212,91 +205,50 @@
     justify-content:flex-start;
     z-index: 1000;
   }
+
+ 
+.contenedor-hero{
+  width: 100vw;
+  height: 80vh;
+  max-width:1000px ;
+  min-width:320px ;
+  margin: auto;
+}
+
+.contenedor-carousel{
+  width: 75vw;
+  max-width:1000px ;
+  min-width:320px ;
+  margin: auto;
+}
+
+
+
+.caricaturas-container{
+  width: 75vw;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: auto;
+}
+
+
+
+ 
+
+
+
+
+/* img{
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 3px 5px rgba(15,15,15,0.5);
+} */
   
   
   
   
    
-  .logotipo{
-    font-size: 18px;
-    color: white;
-  }
-  .section{
-    display: flex;
-   
-    justify-content: space-around;
-    gap: 40px;
-  }
-  .section div{
-    display: flex;
-    flex-direction: column;
-  }
-  div h2{
-    color: var(--color-primario);
-    padding: 10px 0;
-  }
-  a{
-    color: var(--color-primario);
-    text-decoration: none;
-    padding: 5px;
-  }
-  a:hover{
-    color: var(--color-terciario);
-  }
-  form{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  input{
-    background-color: var(--color-cuaternario);
-    border: solid 2px var(--color-terciario);
-    padding: 10px 20px;
-  }
-  button{
-    padding: 10px 20px;
-    background: white;
-    color:var(--color-terciario);
-    font-size: 18px;
-  }
-  .derechos{
-    display: flex;
-    justify-content:center;
-    padding: 20px;
-    background-color: var(--color-quinario);
-    color: var(--color-primario);
-  }
-   /*Nosotros */
-  
-   .container {
-    width: 100%;
-   display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid black;
-    grid-column-gap: 20px ;
-    padding: 10px 10px 10px 10px;
-   
-   }
-   .tarjeta-sobre-mi > img {
-    width: 100%;
-    height:200px;
-    border: 1px solid red;
-   }
-  
-   .tarjeta-sobre-mi{
-    border: 1px solid  #0c0b0a;
-    border-radius: 6%;
-    }
-  
-  
-    .tarjeta-texto{
-      font-size: 14px;
-      text-align: center;
-      justify-content: center;
-    }
-  
+  /*  */
    
    /*---------*/
   
@@ -347,22 +299,36 @@
       width: 100%;
       text-align: left;
     }
+    .caricaturas-container{
+      display: none;
+    }
+    .fa-cat, .fa-dog{
+   display: none;
+    }
    
-  
+  .text-h3{
+    display: none;
+  }
+  .input-registro{
+    max-width: 150px;
+  }
   }
   
   
   .hero {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content:space-between; 
-    background-color: aqua;
-      background-image:url(img/peludo.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+    justify-content:flex-start; 
+    background-image:url(img/peludo.jpg);
+    background-color: var(--color-secundario);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
  } 
+
+   
+
 
 .text-hero{
     display: flex;
@@ -379,16 +345,14 @@
     padding: 5px;
     margin-top: 20px;
 }
+.que-comemos{
+  width: 80%;
+}
 
 
 
  /*Main*/
- .carousel {
-    width: 100%;
-    max-width: 100%; 
-    overflow: hidden;
-    position: relative;
-}
+
 
 .slide {
     width: 100%;
@@ -406,20 +370,46 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-   height: 120px;
-   background-color:var(--color-cuaternario);
-}
-.input-registro{
-    border-radius: 4px;
-    min-height: 36px;
-    padding-left: 5px;
-  }
+    gap: 5px;
+    background-color:var(--color-cuaternario);
+    width: 75vw;
+    height: 10vh;
+    max-width:1000px ;
+    min-width:320px ;
+    margin: auto;
+   }
+  
+   .input-registro{
+     display:flex;
+       border-radius: 4px;
+       min-height: 36px;
+       padding-left: 5px;
+     
+     
+     }
+     .fa-cat, .fa-dog{
+       color: var(--color-terciario);
+     }
+     .cont-registro, form{
+      display: flex;
+ 
+     }
+  
+  
+
+
 
   /*Ofertas*/
   .container-ofertas {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 75vw;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
+    
+  
 }
 
 .card {
@@ -456,7 +446,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
+  .ofer-sem h2{
+    color:var(--color-terciario);
+  }
+   
+    
+    
 
 
 
@@ -467,7 +463,11 @@
     flex-direction: column;
     background-color: var(--color-quinario);
     color: var(--color-primario);
-   ;
+    width: 75vw;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
+   
 }
 
 
@@ -480,47 +480,6 @@
     height: auto;
     border-radius: 5px;
     margin-top: 5px;
-}
-
-/*alimento-perro*/
-
-div.fila {
-  display: flex;
-}
-
- .tarjeta{
- width: calc(25% - 20px); /* 25% del ancho del contenedor menos el espacio entre las tarjetas */
-  max-height: 45vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10px;
-  padding: 20px;
-  border: 1px solid var(--color-secundario);
-  box-sizing: border-box;
-  border-radius: 10px;
-  align-items: center;
-}
-
-.tarjeta-text p:nth-child(2) {
-  text-align: center;
-}
-
-.tarjeta img {
-  width: 80%;
- 
-  justify-content: center;
-  align-items: center;
-  height: 80%;
-  display: block;
-  
-}
-
-
-
-.tarjeta-text{
-  margin-top: 10px;
-  text-align: center; 
 }
 
  /* Footer */
@@ -620,139 +579,5 @@ div.fila {
     padding-top: 30px;
   }
  
- /*Nosotros / quines somos*/
- .quienes-somos h1{
-  text-align: center;
- }
-
- .container {
-  width: 100%;
-  display:flex;
-
-  justify-content: center;
-  grid-column-gap: 20px;
-  padding: 10px 32px;
- }
- .tarjeta-sobre-mi > img {
-  height:200px;
-  border-radius:  12px 12px 0 0;
- }
-
- .tarjeta-sobre-mi{
-  display: flex;
-  flex-direction: column;
-  width: 28%;
-  border: 1px solid  #0c0b0a;
-  border-radius: 12px;
-}
-
-.tarjeta-texto{
-    height: 100% !important;
-    font-size: 14px;
-    padding: 1.4ch;
-    justify-content: center;
-  }
-
-  
-.nosotros {
-  padding: 0 98px;
-
-}
-.nosotros h1 {
-  margin: auto 10px;
-}
-
-.nosotros p{
-  margin: 1ch;
-  line-height: 1.5em;
-}
-
-.nosotros-principal {
-  padding: 42px;
-}
-
- /*---------*/
-
-
- #hero{
-  font-size: 24px;
-  font-weight: 12;
-  color: white;
-  }
-
-
- /*formulario*/
- .contenido-formulario {
-  width: 100%;
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-gap: 50px;
-  margin-top: 90px;
- }
- .contenido-formulario h2{
-  margin-bottom: 15px;
-  font-size: 34px;
-  }
-
-  .contenido-formulario p{
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 34px;
-  }
-   .contenido-formulario a {
-    font-size: 18px;
-    display: inline-block;
-    text-decoration: none;
-    width: 100%;
-    margin-bottom: 15px;
-    color: #0c0b0a;
-    font-weight: 700;
-
-   }
-   .contenido-formulario a i {
-    color: orange;
-    margin-right: 10px;
-   }
-
-   .contenido-formulario form .campo, textarea{
-    width: 100%;
-    padding: 15px 10px;
-    font-size: 15px;
-    border: 1px solid #dbdbdb;
-    margin-top: 20px;
-    border: 3px;
-    outline: 0px;
-   }
-
-   .contenido-formulario form textarea {
-    max-width: 530px;
-    min-width: 530;
-    min-height: 140px;
-    min-height: 150px;
-   }
-   .contenido-formulario .btn-enviar {
-    padding: 15px;
-   margin-bottom: 12px;
-    font-size: 16px;
-    border: none;
-    outline: 0px;
-    background: orange;
-    color: white;
-    border-radius:3px;
-    cursor: pointer;
-    transition: all 300ms ease;
-   }
-
-   .contenido-formulario .btn-enviar:hover{
-    background: #e39403;
-   }
-   textarea {
-    border: 1px solid black;
-   }
-
-   h1{
-   text-align: center;
-
-   }
+ 
+ 
