@@ -5,7 +5,7 @@
     --color-secundario:#a20515;
     --color-terciario:#0c0b0a;
     --color-cuaternario:#ded9d9;
-    --color-quinario:#D97A07;
+    --color-quinario:#fc4b08;
   }
   
   * {
@@ -25,16 +25,8 @@
     } */
     body {
       font-family:"Poppins", sans-serif;
-   
-   
-     
     }
-
-  /* .contenedor{
-    min-height:auto;
-    width: 100%;
-    padding: 30px 0;
-} */
+   
 /* Colores */
 .red{
     color:var(--color-primario);
@@ -94,6 +86,76 @@
     right: 0;
   }
 
+/* ---------------button-mail----------------------------- */
+
+.button-mail {
+  display: inline-block;
+  width: 110px;
+  min-height: 38px;
+  max-height: 100%;
+  background-color: var(--color-primario);
+  border:1px solid var(--color-terciario);
+  color:var(--color-terciario);
+  text-align: center;
+  font: inherit;
+  font-size: 0.8em;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding: 0.7rem 1.5rem;
+}
+
+ 
+
+
+.button-mail span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-mail span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-mail:hover span {
+  padding-right: 25px;
+}
+
+.button-mail:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* --------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .btn-hero{
     background-color: transparent;
     color: var(--color-primario);
@@ -111,7 +173,7 @@
 
   
   nav{
-    background-color: var(--color-quinario);
+    background-color:#fc4b08;
   }
   
   .topnav {
@@ -158,7 +220,8 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--color-quinario);
+    background-color:#fc4b08;
+    border:1px solid var(--color-primario);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -213,6 +276,7 @@
   max-width:1000px ;
   min-width:320px ;
   margin: auto;
+  box-shadow: 0px 15px px 0px rgba(1,1,1,0.8);
 }
 
 .contenedor-carousel{
@@ -229,6 +293,7 @@
   max-width: 1000px;
   min-width: 320px;
   margin: auto;
+  margin-top: 20px;
 }
 
 
@@ -306,9 +371,7 @@
    display: none;
     }
    
-  .text-h3{
-    display: none;
-  }
+    
   .input-registro{
     max-width: 150px;
   }
@@ -365,36 +428,84 @@
 
 
 /*Registro*/
-.registro{
+.registrate-middle{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content:space-around;
     gap: 5px;
-    background-color:var(--color-cuaternario);
+    background-color:white;
     width: 75vw;
-    height: 10vh;
+    height: 8vh;
     max-width:1000px ;
     min-width:320px ;
     margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--color-secundario);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: var(--color-quinario);
    }
   
-   .input-registro{
+   /* .input-registro{
      display:flex;
        border-radius: 4px;
        min-height: 36px;
        padding-left: 5px;
+      } */
      
-     
-     }
+      .label{
+        width: max-content;
+        margin: 40px auto;
+        display: grid;
+        grid-template-areas:"input";
+    }
+    .input{
+        grid-area: input;
+        width: 250px;
+        font: inherit;
+        border-radius: 10px;
+        border: 1px solid gray;
+        padding: 0.7rem 1.5rem;
+    }
+    .label__name{
+        grid-area: input;
+        z-index: 100;
+        width: max-content;
+        margin-left: 1rem;
+        padding: 0 0.5rem;
+        align-self: center;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        transition: transform 0.2s;
+        transform-origin: center left;
+    }
+    .input:focus + .label__name,
+    .input:not(:placeholder-shown) + .label__name{
+        transform: translateY(-50%) scale(.6);
+        background-color:white;
+    }
+
+
+
      .fa-cat, .fa-dog{
        color: var(--color-terciario);
      }
-     .cont-registro, form{
+     .cont-registro{
       display: flex;
+      flex-direction: row;
+      justify-content: space-around;
  
      }
-  
+     .contenedorInput{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .text-h3{
+    font-size: .95vw;
+  }
   
 
 
@@ -461,25 +572,29 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: var(--color-quinario);
-    color: var(--color-primario);
+    background-color:var(--color-quinario);
+    color: var(--color-terciario);
     width: 75vw;
     max-width: 1000px;
     min-width: 320px;
     margin: auto;
+    border: 1px solid var(--color-terciario);
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(1,1,1,0.8);
    
 }
 
 
 #dog-image-container {
-    margin: 40px;
+    margin: 10px;
 }
 
 #dog-image {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 15px;
     margin-top: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(1,1,1,0.8);
 }
 
  /* Footer */
