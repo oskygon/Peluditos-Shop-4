@@ -8,8 +8,8 @@ nav.innerHTML=`
         <div class="topnav" id="myTopnav">
         <a class="logo"> <i class="fa-solid fa-paw fa-sm"></i>Peluditos Shop</a>
         <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
-        <a href="#home">Home</a>
-        <a href="#nosotros">Nosotros</a>
+        <a href="index.html">Home</a>
+        <a href="nosotros.html">Nosotros</a>
           <div class="dropdown">
              <button class="dropbtn">Productos
              <i class="fa fa-caret-down"></i>
@@ -19,31 +19,7 @@ nav.innerHTML=`
             <a href="#">Accesorios</a>
             
             <div class="drop-down-menu">
-                <ul>
-                    <li>
-                        <a href="#">Alimentos <i class="fas fa-caret-right"></i></a>
-                        
-                        <div class="drop-down-menu-1">
-                            <ul>
-                                <li><a href="caninos.html">Caninos</a></li>
-                                <li><a href="felinos.html">Felinos</a></li>
-                                
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="felinos.html">Accesorios <i class="fas fa-caret-right"></i></a>
-                        
-                        <div class="drop-down-menu-1">
-                            <ul>
-                                <li><a href="accesorio-perro.html">Caninos</a></li>
-                                <li><a href="accesorio-gato.html">Felinos</a></li>
-                                
-                            </ul>
-                        </div>
-                    </li>
-                    
-                </ul>
+                
             </div>
             </div>
          </div>
@@ -88,17 +64,17 @@ footer.innerHTML = `
       <div class="section">
           <div>
               <h2>Nosotros</h2>
-              <a href="#">Quienes somos</a>
-              <a href="#">Puntos de venta</a>
+              <a href="nosotros.html">Quienes somos</a>
+              <a href="punto.html">Puntos de venta</a>
               <a href="#">Delivery</a>
-              <a href="#">Contacto</a>
+              <a href="contacto.html">Contacto</a>
           </div>
           <div>
               <h2>Productos</h2>
-              <a href="#">Alimentos para perros</a>
-              <a href="#">Alimentos para gatos</a>
-              <a href="#">Accesorios para perros</a>
-              <a href="#">Accesorios para gatos</a>
+              <a href="caninos.html">Alimentos para perros</a>
+              <a href="felinos.html">Alimentos para gatos</a>
+              <a href="accesorio-perro.html">Accesorios para perros</a>
+              <a href="accesorio-gato.html">Accesorios para gatos</a>
           </div>
           <div>
               <h2>Servicios</h2>
@@ -367,8 +343,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Establecer la URL de la imagen
                 dogImage.src = imageUrl;
                 // Establecer el tamaño deseado de la imagen
-                dogImage.style.width = "300px"; // Ancho deseado
-                dogImage.style.height = "200px"; // Alto deseado
+                // Ancho deseado // Alto deseado
             })
             .catch(error => {
                 console.error("Error fetching dog image:", error);
@@ -381,3 +356,43 @@ document.addEventListener("DOMContentLoaded", function () {
     // Obtener una imagen de perro aleatoria al cargar la página
     getNewDogImage();
 });
+
+/*apidog*/
+const { createApp } = Vue
+ 
+createApp({
+    data() {
+      return {
+            url: "https://dog.ceo/api/breed/hound/images",
+            datos: [],
+            error: false,
+            iteracion: 0,
+            imagenActual: "#"
+        }
+    },
+    methods: {
+        fetchData(url) {
+            fetch(url)
+                .then(response => response.json())
+                .then(
+                    data => {
+                        console.log(data)
+                        this.datos = data
+                    }
+                )
+                .catch(
+                  this.error
+                );
+        },
+        cambiarImagen() {
+            if(this.datos.length)
+                return;
+            this.imagenActual = this.datos.message[this.iteracion];
+            this.iteracion++;
+        }
+    },
+    created() {   // se ejecuta al inicializar VUE despues de crear las variables
+        this.fetchData(this.url);
+        setInterval(this.cambiarImagen, 4000);
+    }
+}).mount('#app');

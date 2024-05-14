@@ -125,7 +125,7 @@
   
   .menuBar ul li {
     /* width: 120px; */
-    padding: 10px 30px;
+   /* padding: 10px 30px;
     text-align:start; 
     /* margin-left: 10px; */
     position: relative;
@@ -141,17 +141,17 @@
  
   
   .menuBar ul li a:hover {
-    color: var(--color-terciario);
+    color: var(--color-terciario);*/
   }
   
-  .fas {
+  /*.fas {
     float: right;
     margin-left: 10px;
     padding-top: 3px;
-  }
+  }*/
   
   /* Desplegables */
-  .drop-down-menu {
+  /*.drop-down-menu {
     display: none;
   }
   
@@ -184,13 +184,13 @@
     top: 0;
     
     
-  }
+  }*/
   
   .hero {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content:space-between; 
+    align-items: end;
     background-color: aqua;
       background-image:url(img/peludo.jpg);
       background-size: cover;
@@ -198,14 +198,16 @@
       background-position: center;
  } 
 
-.text-hero{
+  .text-hero{
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
+
     padding: 20px;
 
 }
-.registrate-hero{
+/*.registrate-hero{
     text-decoration: none;
     color: var(--color-primario);
     border:1px var(--color-primario) solid;
@@ -296,25 +298,16 @@
 
 /*Api*/
 .animal-image{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     background-color: var(--color-quinario);
     color: var(--color-primario);
-   ;
+  text-align: center;
 }
 
-
-#dog-image-container {
-    margin: 40px;
+.flex { 
+  display: flex;
+  justify-content: center;
 }
 
-#dog-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 5px;
-}
 
 /*alimento-perro*/
 
@@ -357,102 +350,6 @@ div.fila {
   text-align: center; 
 }
 
- /* Footer */
-
-  .contenedor-foot{
-    display: flex;
-    justify-content: space-around;
-    min-height: 40vh;
-    width: 100%;
-    padding: 30px 0;
-   
-}
-
-  .logo-foot{
-    display: flex;
-    flex-direction: row;
-    align-items:baseline;
-  
-}
-
-
-.efectivo-transf{
-    font-size: 0.7em;
-}
-
-.contenedor-foot p a {
-    text-decoration: none;
-    color: var(--color-primario);
-    font-size: 0.7em;
-    transition: 1s;
-  }
-  .contenedor-foot h6{
-    font-size: 1em;
-
-  }
-.contenedor-foot p a:hover{
-   
-    color: var(--color-terciario);
-    transition: 0.5s;
- 
-  }
-  .nosotros ,.productos ,.servicios ,.clientes{
-    display: flex;
-    align-items:start;
-    flex-direction: column;
-
-
-   
-  }
-  
-.cancel-compra{
-   
-    font-size: 0.7em;
-}
-.efectivo-transf{
-    font-size: 0.7em;
-}
-
-.contenedor-foot{
-    min-height: 40vh;
-    width: 100%;
-    padding: 30px 0;
-   
-   
-   
-}
-
-.contenedor-foot p a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-    color: var(--color-primario);
-    font-size: 0.7em;
-    transition: 1s;
-   
-  }
-  .contenedor-foot h6{
-    font-size: 1em;
-
-  }
-.contenedor-foot p a:hover{
-   
-    color: var(--color-terciario);
-    transition: 0.5s;
- 
-  }
-  .nosotros a ,.productos a ,.servicios a ,.clientes a {
-    display: flex;
-    align-items:start;
-    flex-direction: column;
-    padding-top: 30px;
-    padding-left: 3px;
-  }
-
-  .forma-pago{
-    padding-top: 30px;
-  }
  
  /*Nosotros / quienes somos*/
  .quienes-somos h1{
@@ -481,7 +378,7 @@ div.fila {
 }
 
 .tarjeta-texto{
-    height: 100% !important;
+    height: 272px !important;
     font-size: 14px;
     padding: 1.4ch;
     justify-content: center;
@@ -512,6 +409,7 @@ div.fila {
   font-size: 24px;
   font-weight: 12;
   color: white;
+
   }
 
 
@@ -526,6 +424,7 @@ div.fila {
   margin-top: 90px;
  }
  .contenido-formulario h2{
+  color:black;
   margin-bottom: 15px;
   font-size: 34px;
   }
@@ -587,12 +486,15 @@ div.fila {
    }
 
    h1{
+    color:#0c0b0a;
    text-align: center;
 
    }
    /*registro-iniciar-sesión*/
-
+    
    section{
+    background-image: url(img/fondo-gato.jpg) ;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -606,7 +508,7 @@ div.fila {
    .contiene-form {
     position: relative;
     width: 400px;
-    background-color: red;
+    background-color:#a20515;
     border: 2px solid rgba(255, 255, 255, .6);
     border-radius: 20px;
     height: 450px;
@@ -618,7 +520,8 @@ div.fila {
     
    }
    .contiene-form h2 {
-    font-size: 2.3rem;
+    margin-top: 20px;
+     font-size: 2.3rem;
     color: white;
     text-align: center;
 
@@ -962,7 +865,6 @@ border: 1px solid red;
 
 .tarjeta-sobre-mi{
 border: 1px solid  #0c0b0a;
-border-radius: 6%;
 }
 
 
@@ -1026,5 +928,19 @@ section-foot{
 
 }
 
+/*Apidog */
+.animal-image img {
+  height: 256px;
+  width: 396px;
+  border-radius: 6px;
+  padding: 24px;
+}
 
 
+/*ver como se llama esta imagen*/
+.perro-gato {
+  display:flex;
+  flex-direction: row;
+  width: 100%;
+
+} 

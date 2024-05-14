@@ -34,46 +34,56 @@
     </div>
     </header>
     <main>
-        <img src="img/gato-perro.jpg" alt="">
+        <img class="perro-gato"   src="img/gato-perro.jpg" alt="">
         <div class="carousel" id="promos">
             <img src="img/promo4.png" alt="Imagen 1" class="slide active">
             <img src="img/promo2.png" alt="Imagen 2" class="slide">
             <img src="img/promo3.jpg" alt="Imagen 3" class="slide">
-        </div>
-        <div class="registro">
-            <div class="icon-registro"><i class="fa-solid fa-dog fa-2xl"></i>
-            <i class="fa-solid fa-cat fa-xl"></i>
-        </div>
-        <div class="texto-registro">
-            <h3>Registrate</h3>
-            <p>Recibí nuestras ofertas y novedades exclusivas</p>
-        </div>
-        <div class="input-registro">
-            <form>
-                <input class="input-registro" type="search" placeholder="Ingresá tu email" aria-label="Search">
-                <button class="button" type="submit" style="vertical-align:middle"><span>Enviar</span></button>
-              </form>
-        </div>
-        </div>
-        <div class="ofertas">
-         <div class="ofer-sem">
-            <h2>Ofertas de la semana</h2>
-         </div>
-            <div id="container-ofertas" class="container-ofertas">
-             
             </div>
-            <button class="button next-Btn" id="nextBtn" type="submit" style="vertical-align:middle"><span>Mostrar mas</span></button>
-     
-        </div>
-         <div class="animal-image">
-            <div>
-             <h2>Nuestros clientes </h2>
-             </div>
-             <div id="dog-image-container">
-            <img id="dog-image" src="()" alt="Random Dog Image">
+            <div class="registro">
+                <div class="icon-registro"><i class="fa-solid fa-dog fa-2xl"></i>
+                <i class="fa-solid fa-cat fa-xl"></i>
+            </div>
+            <div class="texto-registro">
+                <h3>Registrate</h3>
+                <p>Recibí nuestras ofertas y novedades exclusivas</p>
+            </div>
+            <div class="input-registro">
+                <form>
+                    <input class="input-registro" type="search" placeholder="Ingresá tu email" aria-label="Search">
+                    <button class="button" type="submit" style="vertical-align:middle"><span>Enviar</span></button>
+                </form>
+            </div>
+            </div>
+            <div class="ofertas">
+            <div class="ofer-sem">
+                <h2>Ofertas de la semana</h2>
+            </div>
+                <div id="container-ofertas" class="container-ofertas">
+                
+                </div>
+                <button class="button next-Btn" id="nextBtn" type="submit" style="vertical-align:middle"><span>Mostrar mas</span></button>
+        
+            </div>
+           
+            <div class="animal-image">
+                <h2>Nuestros clientes </h2>
+           
+                <div class="flex">
+
+                        <img id="dog-image" src="()" alt="Random Dog Image">
+                    <div id="app">
+                        <img  v-bind:src="imagenActual">
+                    </div>
+                </div>
+
+                
+            </div>  
+           
+           
         </div>
       
-    </div>
+        
     
     </main>
 
@@ -84,63 +94,10 @@
 
 
 
-    <footer id="footer">
-        <section class="foot contenedor-foot red" id="foot">
-            <div class="logo-foot">
-                <h3 class="logo"> <i class="fa-solid fa-paw fa-lg" style="color: #eaeff3;"></i>
-                Peluditos <span>Shop</span></h3>
-            </div>
-           
-            <div class="nosotros">
-                <h6>Nosotros</h6>
-                <p><a href="">Quienes somos</a></p>
-                <p><a href="">Puntos de retiro</a></p>
-                <p><a href="">Delivery</a></p>
-                <p><a href="">Contacto</a></p>
-            </div>
-            <div class="productos">
-                <h6>Productos</h6>
-                <p><a href="">Alimentos para perros</a></p>
-                <p><a href="">Alimentos para gatos</a></p>
-                <p><a href="">Accesorios para perros</a></p>
-                <p><a href="">Accesorios para gatos</a></p>
-            </div>
-            <div class="servicios">
-                <h6>Servicios</h6>
-                <p><a href="">Baños</a></p>
-                <p><a href="">Paseos</a></p>
-                <p><a href="">Peluquería</a></p>
-                <p><a href="">Veterinaria</a></p>
-            </div>
-            <div class="clientes">
-                <h6>Clientes</h6>
-                <p><a href="">Mi cuenta</a></p>
-                <p><a href="">Mis pedidos</a></p>
-                <p><a href="">Cancelar compra</a></p>
-                <p><a href="">Términos y condiciones</a></p>
-         
-            </div>
-            <div class="redes-pay ">
-                <div class="seguinos">
-                    <h6>Seguinos</h6>
-                    <a href=""><i class="facebook"><img src="img/icons8-facebook-rodeado-de-círculo-32.png" alt="facebook"></i></a>
-                    <a href=""><i class="instagram"><img src="img/icons8-instagram-32.png" alt="instagram"></i></a>
-                    <a href=""><i class="twitter"><img src="img/icons8-logo-de-twitter-32.png" alt="twitter"></i></a>
-                    <a href=""><i class="whatsapp"><img src="img/icons8-whatsapp-32.png" alt="whatsapp"></i></a>
-                 
-                </div>
-                <div class="forma-pago">
-                    <h6>Formas de pago</h6>
-                    <i class="visa"><img src="img/icons8-visa-32.png" alt="tarjeta visa"></i>
-                    <i class="mastercard"><img src="img/icons8-tarjeta-mastercard-32.png" alt="tarjeta mastercard"></i>
-                    <i class="amex"><img src="img/icons8-amex-32.png" alt="amex"></i>
-                    <i class="mercadopago"><img src="img/icons8-mercado-pago-32.png" alt="mercadopago"></i>
-                    <p class="efectivo-transf">Efectivo - Transferencia bancaria</p>
-                </div>
-            </div>
-            
-        </section>
+    <footer class="pie">
+       
     </footer>
-<script src="script.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
