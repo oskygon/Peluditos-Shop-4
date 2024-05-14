@@ -325,59 +325,31 @@ document.addEventListener("DOMContentLoaded", inicializar("alimento-perro"));
 document.addEventListener("DOMContentLoaded", inicializar("accesorio-gato"));
 document.addEventListener("DOMContentLoaded", inicializar("accesorio-perro"));
 
-document.addEventListener("DOMContentLoaded", function () {
-    const apiKey = "live_LlSgQwRpWgVPpEpOsNcCPwDX3RSRFaz16ls4AMrJxMeCSLcXhFpSK3WqujpmxpB5";
-    const dogImage = document.getElementById("dog-image");
-
-    // Función para obtener una imagen de perro aleatoria
-    function getNewDogImage() {
-        fetch("https://api.thecatapi.com/v1/images/search?limit=10", {
-            headers: {
-                "x-api-key": apiKey
-            }
-        })
-            .then(response => response.json())
-            .then(data => {
-                // Obtener la URL de la imagen
-                const imageUrl = data[0].url;
-                // Establecer la URL de la imagen
-                dogImage.src = imageUrl;
-                // Establecer el tamaño deseado de la imagen
-                // Ancho deseado // Alto deseado
-            })
-            .catch(error => {
-                console.error("Error fetching dog image:", error);
-            });
-    }
-
-    // Obtener una imagen de perro aleatoria cada 5 segundos
-    setInterval(getNewDogImage, 5000);
-
-    // Obtener una imagen de perro aleatoria al cargar la página
-    getNewDogImage();
-});
-
 /*apidog*/
 const { createApp } = Vue
  
 createApp({
     data() {
       return {
-            url: "https://dog.ceo/api/breed/hound/images",
-            datos: [],
+            urls: ["https://api.thecatapi.com/v1/images/search?limit=10", "https://dog.ceo/api/breed/hound/images"],
+            gatos: null,
+            perros: null,
             error: false,
             iteracion: 0,
-            imagenActual: "#"
+            perro: "",
+            gato: ""
         }
     },
     methods: {
-        fetchData(url) {
+        fetchData(url, storeInd) {
             fetch(url)
                 .then(response => response.json())
                 .then(
                     data => {
-                        console.log(data)
-                        this.datos = data
+                        if(storeInd)
+                            this.perros = data
+                        else
+                            this.gatos = data
                     }
                 )
                 .catch(
@@ -385,14 +357,18 @@ createApp({
                 );
         },
         cambiarImagen() {
-            if(this.datos.length)
+            if(this.perros == null)
                 return;
-            this.imagenActual = this.datos.message[this.iteracion];
+            if(this.gatos.length == null)
+                return;
+            this.gato = this.gatos[this.iteracion % 10].url;
+            this.perro = this.perros.message[this.iteracion];
             this.iteracion++;
         }
     },
     created() {   // se ejecuta al inicializar VUE despues de crear las variables
-        this.fetchData(this.url);
-        setInterval(this.cambiarImagen, 4000);
+        this.fetchData(this.urls[0], false);
+        this.fetchData(this.urls[1], true);
+        setInterval(this.cambiarImagen, 2000);
     }
 }).mount('#app');
