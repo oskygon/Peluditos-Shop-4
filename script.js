@@ -3,6 +3,37 @@ const footer = document.querySelector("footer");
 
 
 
+const forms = document.querySelector(".forms"),
+pwShowHide = document.querySelectorAll(".eye-icon"),
+links = document.querySelectorAll(".link");
+
+pwShowHide.forEach(eyeIcon => {
+eyeIcon.addEventListener("click", () => {
+  let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+  
+  pwFields.forEach(password => {
+      if(password.type === "password"){
+          password.type = "text";
+          eyeIcon.classList.replace("bx-hide", "bx-show");
+          return;
+      }
+      password.type = "password";
+      eyeIcon.classList.replace("bx-show", "bx-hide");
+  })
+  
+})
+})      
+
+links.forEach(link => {
+link.addEventListener("click", e => {
+ e.preventDefault();
+ forms.classList.toggle("show-signup");
+})
+})
+
+
+
+
 //---------Barra de navegación----------
 nav.innerHTML=`  
         <div class="topnav" id="myTopnav">
@@ -113,8 +144,13 @@ nav.innerHTML=`
         
     </footer>`;
 
+    // Redirecciona a login.html
+    document.getElementById("botonIngresar").addEventListener("click", function() {
     
-
+        window.location.href = "login.html";
+    });
+    
+  
 
 
 
@@ -152,14 +188,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const nextBtn = document.getElementById('nextBtn');
     
     const data = [ 
-        { imageUrl: './img/excellent 20kg perros.png', text1: 'Excellent Smart Perro Ad. 20 Kg', text2: '$45.097', text3: 'Envios a domicilio sin cargo' },
-        { imageUrl: './img/old price.png', text1: 'Old Prince Premium Ad. X 20 Kg', text2: '$36.399', text3: 'Envios a domicilio sin cargo' },
-        { imageUrl: './img/proplan.png', text1: 'Pro Plan Perro Ad. 15 + 3 Kg', text2: '$69.502', text3: 'Envios a domicilio sin cargo' },
-        { imageUrl: './img/agility.png', text1: 'Agility Perro Ad. X 20 Kg', text2: '$45.336', text3: 'Envios a domicilio sin cargo' },
-        { imageUrl: './img/slieger.png', text1: 'Sieger Perro Criadores X 20 Kg', text2: '$64.821', text3: 'Envios a domicilio sin cargo' },
-        { imageUrl: './img/royal caning.png', text1: 'Royal Canin Perro Ad. X 15 Kg', text2: '$66.603', text3: 'Envios a domicilio sin cargo' },
-        { imageUrl: './img/selection.png', text1: 'Dog Selection Cachorro 21+3 Kg', text2: '$54.636', text3: 'Envios a domicilio sin cargo' },
-        { imageUrl: './img/dogchow.png', text1: 'Dog Chow S/Col Ad.X 21 Kg', text2: '$39.503', text3: 'Envios a domicilio sin cargo' },
+        { imageUrl: 'https://www.purina.com.ar/sites/default/files/styles/card_450px/public/2024-03/Excellent_Perros_AdultMedyGran.png.webp?itok=8y3j5DeW', text1: 'Excellent Smart Perro Ad. 20 Kg', text2: '$45.097', text3: 'Envios a domicilio sin cargo' },
+        { imageUrl: 'https://www.purina.com.ar/sites/default/files/styles/card_450px/public/2024-03/Excellent_Perros_PuppyPequenos.png.webp?itok=4djBD_pp', text1: 'Eccellent Puppy Ad. X 20 Kg', text2: '$36.399', text3: 'Envios a domicilio sin cargo' },
+        { imageUrl: 'https://www.purina.com.ar/sites/default/files/styles/card_450px/public/2022-08/Reduced_Calorie_Gato_Frente_Pro_Plan.png.webp?itok=Jk50_Y18', text1: 'Pro Plan Gato BC. 15 Kg', text2: '$69.502', text3: 'Envios a domicilio sin cargo' },
+        { imageUrl: 'https://www.purina.com.ar/sites/default/files/styles/card_450px/public/2022-10/Adult-7%2B-Carne-%26-Arroz_1.png.webp?itok=mqlGkqs3', text1: 'Gato Adulto X 20 Kg', text2: '$45.336', text3: 'Envios a domicilio sin cargo' },
+        { imageUrl: 'https://www.purina.com.ar/sites/default/files/styles/card_450px/public/2022-08/gato_adulto_frenre_pro_plan.png.webp?itok=LpfdNG7y', text1: 'Pro Plan Gato Adulto X 20 Kg', text2: '$64.821', text3: 'Envios a domicilio sin cargo' },
+        { imageUrl: 'https://www.purina.com.ar/sites/default/files/styles/card_450px/public/2022-10/Kitten-Pollo-%26-H%C3%ADgado_1.png.webp?itok=XesLYaeC', text1: 'Pro Plan Kitten X 15 Kg', text2: '$66.603', text3: 'Envios a domicilio sin cargo' },
+        { imageUrl: 'https://www.purina.com.ar/sites/default/files/styles/card_450px/public/2022-10/ProPlan-Sensitive-Skin-Cachorros.png.webp?itok=uLsD2Jf5', text1: 'Sensitive Cachorro 21+3 Kg', text2: '$54.636', text3: 'Envios a domicilio sin cargo' },
+        { imageUrl: 'https://www.purina.com.ar/sites/default/files/styles/card_450px/public/2024-01/1200x1200_DC_Gran_Comienzo_cachorros_M%26G.png.webp?itok=Nz8mWmXk', text1: 'Dog Chow S/Col Ad.X 21 Kg', text2: '$39.503', text3: 'Envios a domicilio sin cargo' },
        
     ];
     
@@ -202,6 +238,25 @@ document.addEventListener("DOMContentLoaded", function() {
         loadCards();
     });
 });
+
+let sliderInner = document.querySelector(".slider-inner");
+let images = sliderInner.querySelectorAll("img");
+let index = 1;
+setInterval(function(){
+    let percentage = index * -100 ;
+   
+    sliderInner.style.transform = "translateX("+percentage+"%)";
+    index ++;
+    if(index > (images.length -1)){
+        index = 0 ;
+    }
+}, 5000);
+
+
+
+
+
+
 
 function inicializar(animal) {
     return () => {
@@ -366,3 +421,4 @@ document.addEventListener("DOMContentLoaded", function() {
     // Obtener una imagen de perro aleatoria al cargar la página
     getNewDogImage();
 });
+

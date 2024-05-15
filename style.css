@@ -174,6 +174,7 @@
   
   nav{
     background-color:#fc4b08;
+    border-bottom: 1px solid var(--color-primario);
   }
   
   .topnav {
@@ -295,6 +296,15 @@
   margin: auto;
   margin-top: 20px;
 }
+.purina, .alimentos-purina{
+  width: 75vw;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
 
 
 
@@ -328,7 +338,24 @@
    
   }
   
-  
+  @media screen and (min-width: 1160px) {
+    .card {
+        width: calc(50% - 20px); /* Ajusta según el diseño de tu tarjeta */
+    }
+}
+
+@media screen and (max-width: 1088px) and (min-width: 890px) {
+    .card {
+        width: calc(50% - 20px); /* Ajusta según el diseño de tu tarjeta */
+    }
+}
+
+@media screen and (max-width: 889px) {
+    .card {
+        width: calc(100% - 20px); /* Ajusta según el diseño de tu tarjeta */
+    }
+}
+
   
   
   @media screen and (max-width: 890px) {
@@ -374,7 +401,15 @@
     
   .input-registro{
     max-width: 150px;
+
+    
   }
+  .text-h3{
+    font-size: 3vw;
+    font-weight: bolder;
+  }
+
+
   }
   
   
@@ -388,6 +423,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    
  } 
 
    
@@ -504,7 +540,7 @@
       justify-content: center;
   }
   .text-h3{
-    font-size: .95vw;
+    font-size: 1.5vw;
   }
   
 
@@ -562,7 +598,35 @@
     color:var(--color-terciario);
   }
    
-    
+    /* slider2---------------------- */
+
+
+    .slider{
+      overflow: hidden;
+      width: 100%;
+      height: 50vh;
+      max-width:1000px ;
+      min-width:320px ;
+      margin: auto;
+      margin-bottom: 10px;
+      border-radius: 15px;
+      box-shadow: 0px 15px px 0px rgba(1,1,1,0.8);;
+
+  }
+  .slider-inner{
+      display: flex;
+      flex-wrap: nowrap;
+      transition: all 0.3s ease-in;
+  }
+      .sl2{
+          width: 100%;
+          
+      }
+      .slider-inner, .sl2{
+          aspect-ratio: 16/9;
+          object-fit: cover;
+      }
+
     
 
 
