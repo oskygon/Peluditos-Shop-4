@@ -405,7 +405,7 @@
     
   }
   .text-h3{
-    font-size: 3vw;
+    font-size: 2vw;
     font-weight: bolder;
   }
 
@@ -539,9 +539,7 @@
       align-items: center;
       justify-content: center;
   }
-  .text-h3{
-    font-size: 1.5vw;
-  }
+
   
 
 
@@ -604,7 +602,7 @@
     .slider{
       overflow: hidden;
       width: 100%;
-      height: 50vh;
+      height: auto;
       max-width:1000px ;
       min-width:320px ;
       margin: auto;
@@ -759,4 +757,22 @@
   }
  
  
+/* Tabletas */
+@media screen and (max-width: 991px) {
+  .card {
+      width: calc(50% - 20px);
+  }
+}
+
+/* Dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .card {
+      width: calc(100% - 20px);
+  }
+  .slider{
+    max-width: 320px;
+   
+  }
+}
+
  

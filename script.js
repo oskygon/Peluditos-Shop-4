@@ -2,36 +2,10 @@ const nav = document.querySelector("nav");
 const footer = document.querySelector("footer");
 
 
-
-const forms = document.querySelector(".forms"),
-pwShowHide = document.querySelectorAll(".eye-icon"),
-links = document.querySelectorAll(".link");
-
-pwShowHide.forEach(eyeIcon => {
-eyeIcon.addEventListener("click", () => {
-  let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
-  
-  pwFields.forEach(password => {
-      if(password.type === "password"){
-          password.type = "text";
-          eyeIcon.classList.replace("bx-hide", "bx-show");
-          return;
-      }
-      password.type = "password";
-      eyeIcon.classList.replace("bx-show", "bx-hide");
-  })
-  
-})
-})      
-
-links.forEach(link => {
-link.addEventListener("click", e => {
- e.preventDefault();
- forms.classList.toggle("show-signup");
-})
-})
-
-
+document.getElementById("botonIngresar").addEventListener("click", function() {
+    // Redireccionar al usuario a login.html
+    window.location.href = "login.html";
+});
 
 
 //---------Barra de navegación----------
@@ -144,11 +118,7 @@ nav.innerHTML=`
         
     </footer>`;
 
-    // Redirecciona a login.html
-    document.getElementById("botonIngresar").addEventListener("click", function() {
-    
-        window.location.href = "login.html";
-    });
+  
     
   
 
@@ -183,6 +153,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById('container-ofertas');
     const nextBtn = document.getElementById('nextBtn');
@@ -196,11 +168,10 @@ document.addEventListener("DOMContentLoaded", function() {
         { imageUrl: 'https://www.purina.com.ar/sites/default/files/styles/card_450px/public/2022-10/Kitten-Pollo-%26-H%C3%ADgado_1.png.webp?itok=XesLYaeC', text1: 'Pro Plan Kitten X 15 Kg', text2: '$66.603', text3: 'Envios a domicilio sin cargo' },
         { imageUrl: 'https://www.purina.com.ar/sites/default/files/styles/card_450px/public/2022-10/ProPlan-Sensitive-Skin-Cachorros.png.webp?itok=uLsD2Jf5', text1: 'Sensitive Cachorro 21+3 Kg', text2: '$54.636', text3: 'Envios a domicilio sin cargo' },
         { imageUrl: 'https://www.purina.com.ar/sites/default/files/styles/card_450px/public/2024-01/1200x1200_DC_Gran_Comienzo_cachorros_M%26G.png.webp?itok=Nz8mWmXk', text1: 'Dog Chow S/Col Ad.X 21 Kg', text2: '$39.503', text3: 'Envios a domicilio sin cargo' },
-       
     ];
     
     let startIndex = 0;
-    const cardsPerRow = 4;
+    let cardsPerRow = 4; // Número de tarjetas por fila
     
     function loadCards() {
         container.innerHTML = ''; 
@@ -237,7 +208,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         loadCards();
     });
+
+    // Ajustar el número de tarjetas por fila en función del tamaño de la pantalla
+    window.addEventListener('resize', function() {
+        if (window.innerWidth >= 992) {
+            cardsPerRow = 4;
+        } else if (window.innerWidth >= 768) {
+            cardsPerRow = 2;
+        } else {
+            cardsPerRow = 1;
+        }
+        loadCards(); // Recargar las tarjetas con el nuevo número por fila
+    });
 });
+
+
+
+
 
 let sliderInner = document.querySelector(".slider-inner");
 let images = sliderInner.querySelectorAll("img");
