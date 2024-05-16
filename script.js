@@ -334,38 +334,7 @@ document.addEventListener("DOMContentLoaded", inicializar("alimento-perro"));
 document.addEventListener("DOMContentLoaded", inicializar("accesorio-gato"));
 document.addEventListener("DOMContentLoaded", inicializar("accesorio-perro"));
 
-/*document.addEventListener("DOMContentLoaded", function() {
-    const apiKey = "live_LlSgQwRpWgVPpEpOsNcCPwDX3RSRFaz16ls4AMrJxMeCSLcXhFpSK3WqujpmxpB5";
-    const dogImage = document.getElementById("dog-image");
 
-    // Función para obtener una imagen de gatos  aleatoria
-    function getNewDogImage() {
-        fetch("https://api.thecatapi.com/v1/images/search?limit=10", {
-            headers: {
-                "x-api-key": apiKey
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Obtener la URL de la imagen
-            const imageUrl = data[0].url;
-            // Establecer la URL de la imagen
-            dogImage.src = imageUrl;
-            // Establecer el tamaño deseado de la imagen
-            dogImage.style.width = "300px"; // Ancho deseado
-            dogImage.style.height = "200px"; // Alto deseado
-        })
-        .catch(error => {
-            console.error("Error fetching dog image:", error);
-        });
-    }
-
-    // Obtener una imagen de gatos aleatoria cada 5 segundos
-    setInterval(getNewDogImage, 5000);
-
-    // Obtener una imagen de gatos aleatoria al cargar la página
-    getNewDogImage();
-});*/
 const { createApp } = Vue
  
 createApp({
