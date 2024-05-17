@@ -16,13 +16,8 @@
 }
 
 
-/* Animacion */
-/* @keyframes aparicion{
-      0%{opacity: 0;filter: grayscale(100%);}
-      50%{opacity: 1;}
-      100%{filter: grayscale(0%);}
       
-    } */
+    
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -278,25 +273,6 @@ nav {
   margin-top: 20px;
 }
 
-
-
-
-
-
-
-
-/* img{
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 3px 5px rgba(15,15,15,0.5);
-} */
-
-
-
-
-
-/*  */
-
 /*---------*/
 
 
@@ -349,9 +325,7 @@ nav {
   margin-top: 20px;
 }
 
-.que-comemos {
-  width: 80%;
-}
+
 
 
 
@@ -368,32 +342,6 @@ nav {
 }
 
 
-/*Registro*/
-.registrate-middle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  gap: 5px;
-  background-color: white;
-  width: 75vw;
-  height: 8vh;
-  max-width: 1000px;
-  min-width: 320px;
-  margin: auto;
-  margin-top: 10px;
-  border-radius: 10px;
-  border: 1px solid var(--color-secundario);
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  background-color: var(--color-quinario);
-}
-
-/* .input-registro{
-     display:flex;
-       border-radius: 4px;
-       min-height: 36px;
-       padding-left: 5px;
-      } */
 
 .label {
   width: max-content;
@@ -705,6 +653,7 @@ nav {
 }
 
 .nosotros p {
+ 
   margin: 1ch;
   line-height: 1.5em;
 }
@@ -848,47 +797,8 @@ section {
 
 }
 
-.contiene-form {
-  position: relative;
-  width: 400px;
-  background-color: #a20515;
-  border: 2px solid rgba(255, 255, 255, .6);
-  border-radius: 20px;
-  height: 450px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
 
-
-}
-
-.contiene-form h2 {
-  margin-top: 20px;
-  font-size: 2.3rem;
-  color: white;
-  text-align: center;
-
-}
-
-.input-contenedor {
-  position: relative;
-  margin: 30px;
-  width: 300px;
-  border-bottom: 2px solid #fff;
-}
-
-.input-contenedor label {
-  position: relative;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  color: #fff;
-  pointer-events: none;
-  transition: .6s;
-  font-family: bold;
-
-}
 
 input:focus~label,
 input:valid~label {
@@ -1043,6 +953,10 @@ button:hover {
     margin-left: 0;
   }
 
+  .topnav a {
+    padding: 14px 12px;
+  }
+
   .topnav a:not(:first-child),
   .dropdown .dropbtn {
     display: none;
@@ -1156,7 +1070,7 @@ button:hover {
   .tarjeta {
     width: calc(25% - 20px);
     /* 25% del ancho del contenedor menos el espacio entre las tarjetas */
-    max-height: 45vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1294,7 +1208,7 @@ button:hover {
 
   .tarjeta {
     min-width: 250px;
-    max-height: 300px;
+   
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1360,6 +1274,77 @@ button:hover {
   }
 
 }
+/*-------------*/
+.tarjeta {
+  width: calc(20% - 15px);
+  /* 25% del ancho del contenedor menos el espacio entre las tarjetas */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid var(--color-secundario);
+  box-sizing: border-box;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.tarjeta-text p:nth-child(2) {
+  text-align: center;
+}
+
+.tarjeta img {
+  width: 60%;
+
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  display: block;
+
+}
+
+
+
+.tarjeta-text {
+  margin-top: 10px;
+  text-align: center;
+}
+div.fila {
+  display: flex;
+  justify-content: center;
+}
+/*------------*/
+.card {
+ 
+  width: 100%;
+  /* 25% del ancho del contenedor menos el espacio entre las tarjetas */
+  max-height: 45vh;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid var(--color-secundario);
+  box-sizing: border-box;
+  border-radius: 10px;
+  align-items: center;
+}
+ 
+
+.card img {
+  width: 80%;
+  height: 60%;
+  display: block;
+
+}
+
+.card-text {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.0em;
+}
+
 
 
 
@@ -1370,21 +1355,65 @@ button:hover {
   width: 100%;
 
 }
+/* barra de ofertas */
+.texto-registro {
+ border: 2px solid #0c0b0a;
+ border-radius: 12px;
+ width: 100%;
+ text-align: center;
+ background-color:#fc4b08;
+ padding: 30px;
+ margin-top: 10px;
+ margin: 25px 0px 30px 0px;
+}
 
-/*pagina de productos*/
-.productos {
-  width: 100%;
-  border-radius: 4px;
-  border: 2px solid red;
+/*--pagina productos--*/
+#productos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#productos a {
+  width: 50%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  text-shadow: white 2px 2px, white 2px -2px, white -2px -2px, white -2px 2px;
+  transition: filter 480ms, color 240ms;
   text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 20px;
-  margin: 4px 40px 8px 0;
-
-
+  font-size: 32px;
+  font-weight: bold;
+  transform: scale(1);
+  &:hover {
+    filter: brightness(92%);
+    color: #fc4b08;
+  }
 }
 
-.productos p a {
-  columns: white;
+#productos a:nth-child(1) {
+  background-image: url(./img/boton-perro.jpg);
 }
+
+#productos a:nth-child(2) {
+  background-image: url(./img/boton-gato.jpg);
+}
+
+#productos a:nth-child(3) {
+  background-image: url(./img/boton-perro3.jpg);
+}
+
+
+#productos a:nth-child(4) {
+  background-image: url(./img/boton-gato2.jpg);
+}
+
+#productos a>img {
+  width: 100%;
+}
+
+
+
+  
+
