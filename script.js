@@ -26,10 +26,10 @@ nav.innerHTML=`
             <i class="fa fa-caret-down"></i>
             </button>
           <div class="dropdown-content">
-            <a href="#">Baños</a>
-            <a href="#">Paseos</a>
-            <a href="#">Peluquería</a>
-            <a href="#">Veterinaria</a>
+            <a href="banios.html">Baños</a>
+            <a href="paseos.html">Paseos</a>
+            <a href="peluqueria.html">Peluquería</a>
+            <a href="veterinaria.html">Veterinaria</a>
           </div>
         </div>
         
