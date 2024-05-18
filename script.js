@@ -2,10 +2,7 @@ const nav = document.querySelector("nav");
 const footer = document.querySelector("footer");
 
 
-document.getElementById("botonIngresar").addEventListener("click", function() {
-    // Redireccionar al usuario a login.html
-    window.location.href = "login.html";
-});
+
 
 
 //---------Barra de navegación----------
@@ -13,8 +10,8 @@ nav.innerHTML=`
         <div class="topnav" id="myTopnav">
         <a class="logo"> <i class="fa-solid fa-paw fa-sm pata-nav"></i>Peluditos Shop</a>
         <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
-        <a href="#home">Home</a>
-        <a href="#nosotros">Nosotros</a>
+        <a href="index.html">Home</a>
+        <a href="nosotros.html">Nosotros</a>
           <div class="dropdown">
              <button class="dropbtn">Productos
              <i class="fa fa-caret-down"></i>
@@ -35,11 +32,12 @@ nav.innerHTML=`
             <a href="#">Veterinaria</a>
           </div>
         </div>
+        
      <div class="iconos-three">
-        <div>
-        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a></div>
+       
+        <div><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></div>
         <div><a href=""><i class="fa-solid fa-user"></i></a></div>
-       <div> <a href=""><i class="fa-solid fa-cart-shopping"></i></a></div>
+        <div><a href=""><i class="fa-solid fa-cart-shopping"></i></a></div>
         </div>
       </div>
       </div>`;
@@ -409,3 +407,73 @@ document.addEventListener("DOMContentLoaded", function() {
     getNewDogImage();
 });
 
+
+document.getElementById("botonIngresar").addEventListener("click", function() {
+    // Redireccionar al usuario a login.html
+    window.location.href = "login.html";
+});
+
+
+
+document.getElementById("botonEnviarMail").addEventListener("click", function() {
+    var emailInput = document.getElementById("email");
+
+    if (emailInput.value) {
+        // Mostrar el mensaje de éxito como un alert
+        alert("Email enviado con éxito");
+        // Limpiar el campo de entrada
+        emailInput.value = "";
+    } else {
+        // En caso de que el campo esté vacío, mostrar un mensaje de error
+        alert("Por favor, ingresa un email válido!!");
+    }
+});
+
+
+
+
+const { createApp } = Vue;
+
+createApp({
+    data() {
+        return {
+            urls: ["https://api.thecatapi.com/v1/images/search?limit=10", "https://dog.ceo/api/breed/hound/images"],
+            gatos: null,
+            perros: null,
+            error: false,
+            iteracion: 0,
+            perro: "",
+            gato: ""
+        }
+    },
+    methods: {
+        fetchData(url, storeInd) {
+            fetch(url)
+                .then(response => response.json())
+                .then(
+                    data => {
+                        if(storeInd)
+                            this.perros = data;
+                        else
+                            this.gatos = data;
+                    }
+                )
+                .catch(() => {
+                    this.error = true;
+                });
+        },
+        cambiarImagen() {
+            if (this.perros == null || this.gatos == null) {
+                return;
+            }
+            this.gato = this.gatos[this.iteracion % 10].url;
+            this.perro = this.perros.message[this.iteracion % this.perros.message.length];
+            this.iteracion++;
+        }
+    },
+    created() {
+        this.fetchData(this.urls[0], false);
+        this.fetchData(this.urls[1], true);
+        setInterval(this.cambiarImagen, 2000);
+    }
+}).mount('#app');

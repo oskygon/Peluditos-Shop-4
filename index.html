@@ -22,9 +22,10 @@
     <header >
     <div class="hero contenedor-hero" id="hero">
         
-                <div class="text-hero"><h2 class="logo"> <i class="fa-solid fa-paw fa-lg" style="color: #eaeff3;"></i>
-                    Peluditos <span>Shop</span></h2>
-                    <h4>Tienda de Mascotas</h4>
+                <div class="text-hero">
+                    <h1 class="logo"> <i class="fa-solid fa-paw fa-lg" ></i>
+                    Peluditos Shop</h1>
+                    <h4 class="tienda">Tienda de Mascotas</h4>
           
                     <button id="botonIngresar"  class="button btn-hero" type="submit" style="vertical-align:middle" ><span>Ingresá</span></button>
                   
@@ -35,7 +36,7 @@
                 
           
             </div>
-    </div>
+    
     </header>
     <main>
 
@@ -72,53 +73,52 @@
         <img class="sl2" src="img/1-slide-1627505124264-1055444766-c9962de05ddfc02297b9dc9620dcee6a1627505124-1920-1920.png" alt="promo2">
             </div>
          </div>
+         <div class="texto-registro">
+             <h3 class="text-h3">Recibí nuestras ofertas por email!!</h3>
+         
+         </div>
          <div class="registrate-middle">
             
-            <div class="texto-registro">
-                <h3 class="text-h3">Enviá tu email y recibí nuestras ofertas exclusivas</h3>
-            
-            </div>
     
         </div>
         <div class="contenedorInput">
             <div>
             <label class="label">
-        <input type="text" placeholder=""class="input" >
+        <input type="email" placeholder="" class="input" id="email">
         <span class="label__name">Ingresá tu email</span>
         
             </label>
             </div>
             <div>
-                <button class="button-mail" type="submit" style="vertical-align:middle"><span>Enviar</span></button>
-
+                <button id="botonEnviarMail" class="button-mail" type="submit" style="vertical-align:middle"><span>Enviar</span></button>
+         
             </div>
             </div>
 
 
 
-        
-         <div class="animal-image">
-            <div>
-             <h2>Nuestros clientes </h2>
-             </div>
-             <div id="dog-image-container">
-            <img id="dog-image" src="()" alt="Imagenes de gatitos y perritos">
+   
+
+
+    <div class="animal-image">
+        <div>
+            <h2>Nuestros clientes </h2>
         </div>
-      
+        <div class="flexible">
+
+            <div id="app">
+                <img v-bind:src="gato">
+                <img v-bind:src="perro">
+            </div>
+        </div>
     </div>
-    
-    </main>
+</main>
 
+<footer id="footer">
+</footer>
 
-
-
-
-
-
-
-    <footer id="footer">
-       
-    </footer>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="script.js"></script>
+
   </body>
 </html>

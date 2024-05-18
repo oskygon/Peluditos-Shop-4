@@ -26,6 +26,29 @@
     body {
       font-family:"Poppins", sans-serif;
     }
+
+    .tienda{
+      font-size: 1rem;
+      background: linear-gradient(
+          to right,
+          #c2e30a 20%,
+          #a1b908 40%,
+          #eeda41 60%,
+          #f86f2f 80%
+         
+      );
+      background-size:200% ;
+      color: transparent;
+      background-clip: text;
+      animation:shine 6s linear infinite ;
+  }
+      @keyframes shine {
+          to{
+              background-position:200% center;
+          }
+          
+      }
+  
    
 /* Colores */
 .red{
@@ -86,7 +109,18 @@
     right: 0;
   }
 
-/* ---------------button-mail----------------------------- */
+/* ---------------button-mail recibir ofertas----------------------------- */
+.texto-registro{
+  display: flex;
+  justify-content: center;
+}
+.text-h3{
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+ 
+  
 
 .button-mail {
   display: inline-block;
@@ -266,7 +300,7 @@
   .iconos-three{
     display: flex;
     align-items: center;
-    justify-content:flex-start;
+    justify-content:start;
     z-index: 1000;
   }
 
@@ -285,6 +319,7 @@
   max-width:1000px ;
   min-width:320px ;
   margin: auto;
+  padding-top: 10px;
 }
 
 
@@ -295,6 +330,7 @@
   min-width: 320px;
   margin: auto;
   margin-top: 20px;
+  overflow: hidden;
 }
 .purina, .alimentos-purina{
   width: 75vw;
@@ -313,17 +349,6 @@
 
 
 
-/* img{
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 3px 5px rgba(15,15,15,0.5);
-} */
-  
-  
-  
-  
-   
-  /*  */
    
    /*---------*/
   
@@ -334,6 +359,11 @@
     }
     section-foot{
       flex-direction: column;
+    }
+    .iconos-three{
+     
+      justify-content:center;
+   
     }
    
   }
@@ -354,6 +384,11 @@
     .card {
         width: calc(100% - 20px); /* Ajusta según el diseño de tu tarjeta */
     }
+    .iconos-three{
+     
+      justify-content:center;
+   
+    }
 }
 
   
@@ -369,6 +404,11 @@
     .topnav a.icon {
       float: right;
       display: block;
+    }
+    .iconos-three{
+     
+      justify-content:center;
+   
     }
   }
   
@@ -403,10 +443,6 @@
     max-width: 150px;
 
     
-  }
-  .text-h3{
-    font-size: 2vw;
-    font-weight: bolder;
   }
 
 
@@ -464,9 +500,9 @@
 
 
 /*Registro*/
-.registrate-middle{
+/* .registrate-middle{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content:space-around;
     gap: 5px;
@@ -482,13 +518,12 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     background-color: var(--color-quinario);
    }
-  
-   /* .input-registro{
-     display:flex;
-       border-radius: 4px;
-       min-height: 36px;
-       padding-left: 5px;
-      } */
+   */
+     .message {
+            display: none;
+            color: green;
+            margin-top: 10px;
+        }
      
       .label{
         width: max-content;
@@ -757,14 +792,14 @@
   }
  
  
-/* Tabletas */
+/* Tablet */
 @media screen and (max-width: 991px) {
   .card {
       width: calc(50% - 20px);
   }
 }
 
-/* Dispositivos móviles */
+/* Celulares */
 @media screen and (max-width: 767px) {
   .card {
       width: calc(100% - 20px);
@@ -773,6 +808,30 @@
     max-width: 320px;
    
   }
+  .iconos-three{
+     
+    justify-content:center;
+ 
+  }
 }
 
- 
+
+.animal-image img {
+  width: 300px;
+  height: 168px; 
+  object-fit: cover;
+  margin: 10px;
+  border: 2px solid var(--color-terciario);
+  border-radius: 30px;
+  box-shadow: 0px 8px 16px 0px rgba(0,2,2,0.8);
+  
+}
+.flexible {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.animal-image h2 {
+  text-align: center;
+}
+
