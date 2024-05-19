@@ -7,7 +7,7 @@ const footer = document.querySelector("footer");
 
 //---------Barra de navegación----------
 nav.innerHTML=`  
-        <div class="topnav" id="myTopnav">
+    <div class="topnav" id="myTopnav">
         <a class="logo"> <i class="fa-solid fa-paw fa-sm pata-nav"></i>Peluditos Shop</a>
         <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
         <a href="index.html">Home</a>
@@ -53,34 +53,34 @@ nav.innerHTML=`
             
            <div class="div2">
             <h4>Nosotros</h4>
-                <p><a href="">Quienes somos</a></p>
-                <p><a href="">Puntos de retiro</a></p>
+                <p><a href="nosotros.html">Quienes somos</a></p>
+                <p><a href="punto.html">Puntos de Ventas</a></p>
                 <p><a href="">Delivery</a></p>
-                <p><a href="">Contacto</a></p>
+                <p><a href="contacto.html">Contacto</a></p>
            </div>
 
           <div class="div3">
             <h4>Productos</h4>
-                <p><a href="">Alimentos para perros</a></p>
-                <p><a href="">Alimentos para gatos</a></p>
-                <p><a href="">Accesorios para perros</a></p>
-                <p><a href="">Accesorios para gatos</a></p>
+                <p><a href="caninos.html">Alimentos para perros</a></p>
+                <p><a href="felinos.html">Alimentos para gatos</a></p>
+                <p><a href="accesorio-perro.html">Accesorios para perros</a></p>
+                <p><a href="accesorio-gato.html">Accesorios para gatos</a></p>
             </div>
 
           <div class="div4">
             <h4>Servicios</h4>
-               <p><a href="">Baños</a></p>
-               <p><a href="">Paseos</a></p>
-               <p><a href="">Peluquería</a></p>
-               <p><a href="">Veterinaria</a></p>
+               <p><a href="#">Baños</a></p>
+               <p><a href="#">Paseos</a></p>
+               <p><a href="#">Peluquería</a></p>
+               <p><a href="#">Veterinaria</a></p>
          </div>
 
         <div class="div5">
             <h4>Clientes</h4>
-                <p><a href="">Mi cuenta</a></p>
-                <p><a href="">Mis pedidos</a></p>
-                <p><a href="">Cancelar compra</a></p>
-                <p><a href="">Términos y condiciones</a></p>
+                <p><a href="#">Mi cuenta</a></p>
+                <p><a href="#">Mis pedidos</a></p>
+                <p><a href="#">Cancelar compra</a></p>
+                <p><a href="#">Términos y condiciones</a></p>
             </div>
 
         <div class="div6">

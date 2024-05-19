@@ -15,6 +15,7 @@
     scroll-behavior: smooth;
 }
 
+/* Google Fonts - Poppins */
 body {
     font-family:"Poppins", sans-serif;
   }
@@ -55,6 +56,10 @@ body {
    
 
 .container-login{
+
+
+
+.container{
     height: 100vh;
     width: 100%;
     display: flex;
@@ -113,6 +118,10 @@ body {
 
 
    /* ---------------------------------------------------- */
+    background-color:var(--color-quinario);
+    column-gap: 30px;
+    z-index: -10;
+}
 .form{
     position: absolute;
     max-width: 430px;
@@ -336,9 +345,11 @@ a.google span{
     .contactanos{
 font-size: .5em;
     }
+@media screen and (max-width: 400px) {
+    .form{
+        padding: 20px 10px;
+    }
     
 }
 
-
-
- 
+}
