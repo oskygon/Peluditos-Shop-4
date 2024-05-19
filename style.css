@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --color-primario: #eaeff3;
@@ -14,37 +14,36 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
- */
-    body {
-      font-family:"Poppins", sans-serif;
-    }
 
-    .tienda{
-      font-size: 1rem;
-      background: linear-gradient(
-          to right,
-          #c2e30a 20%,
-          #a1b908 40%,
-          #eeda41 60%,
-          #f86f2f 80%
-         
-      );
-      background-size:200% ;
-      color: transparent;
-      background-clip: text;
-      animation:shine 6s linear infinite ;
-  }
-      @keyframes shine {
-          to{
-              background-position:200% center;
-          }
-          
-      }
-  
-   
-    
+/* Animacion */
+/* @keyframes aparicion{
+      0%{opacity: 0;filter: grayscale(100%);}
+      50%{opacity: 1;}
+      100%{filter: grayscale(0%);}
+      
+    } */
 body {
   font-family: "Poppins", sans-serif;
+}
+
+.tienda {
+  font-size: 1rem;
+  background: linear-gradient(
+    to right,
+    #c2e30a 20%,
+    #a1b908 40%,
+    #eeda41 60%,
+    #f86f2f 80%
+  );
+  background-size: 200%;
+  color: transparent;
+  background-clip: text;
+  animation: shine 6s linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
 
 /* Colores */
@@ -52,7 +51,6 @@ body {
   color: var(--color-primario);
   background-color: var(--color-secundario);
 }
-
 .white {
   color: var(--color-secundario);
   background-color: var(--color-primario);
@@ -62,7 +60,6 @@ body {
   color: var(--color-primario);
   font-size: 30px;
 }
-
 
 .button {
   display: inline-block;
@@ -88,7 +85,7 @@ body {
 }
 
 .button span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -106,11 +103,11 @@ body {
 }
 
 /* ---------------button-mail recibir ofertas----------------------------- */
-.texto-registro{
+.texto-registro {
   display: flex;
   justify-content: center;
 }
-.text-h3{
+.text-h3 {
   font-size: 1.8rem;
   text-align: center;
 }
@@ -134,9 +131,6 @@ body {
   padding: 0.7rem 1.5rem;
 }
 
-
-
-
 .button-mail span {
   cursor: pointer;
   display: inline-block;
@@ -145,7 +139,7 @@ body {
 }
 
 .button-mail span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -174,6 +168,7 @@ body {
 
 nav {
   background-color: #fc4b08;
+  border-bottom: 1px solid var(--color-primario);
 }
 
 .topnav {
@@ -190,97 +185,15 @@ nav {
   text-decoration: none;
   font-size: 17px;
 }
-  
-  nav{
-    background-color:#fc4b08;
-    border-bottom: 1px solid var(--color-primario);
-  }
-  
-  .topnav {
-    overflow: hidden;
-    margin-left: 33.33%;
-  }
-  
-  .topnav a {
-    float: left;
-    display: block;
-    color: var(--color-primario);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  
-  
-  .topnav .icon {
-    display: none;
-  }
-  .fa-solid{
-    color: var(--color-primario);
-    padding: 0 5px;
-  }
-  
-  .dropdown {
-    float: left;
-    overflow: hidden;
-  }
-  
-  .dropdown .dropbtn {
-    font-size: 17px;    
-    border: none;
-    outline: none;
-    color:var(--color-primario);
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color:#fc4b08;
-    border:1px solid var(--color-primario);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .topnav a:hover, .dropdown:hover .dropbtn { 
-    .topnav .icon {
+
+.topnav .icon {
   display: none;
 }
-
 .fa-solid {
   color: var(--color-primario);
   padding: 0 5px;
 }
 
-  }
-  .dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  .iconos-three{
-    display: flex;
-    align-items: center;
-    justify-content:start;
-    z-index: 1000;
-  }
 .dropdown {
   float: left;
   overflow: hidden;
@@ -318,28 +231,20 @@ nav {
 
 .topnav a:hover,
 .dropdown:hover .dropbtn {
-
   color: var(--color-terciario);
-
 }
-
 .pata-nav:hover {
   color: var(--color-terciario);
 }
-
 .fa-magnifying-glass:hover {
   color: var(--color-terciario);
 }
-
 .fa-user:hover {
   color: var(--color-terciario);
 }
-
 .fa-cart-shopping:hover {
   color: var(--color-terciario);
-
 }
-
 .dropdown-content a:hover {
   background-color: #ddd;
   color: black;
@@ -348,14 +253,12 @@ nav {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 .iconos-three {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: start;
   z-index: 1000;
 }
-
 
 .contenedor-hero {
   width: 100vw;
@@ -374,8 +277,6 @@ nav {
   padding-top: 10px;
 }
 
-
-
 .caricaturas-container {
   width: 75vw;
   max-width: 1000px;
@@ -384,7 +285,8 @@ nav {
   margin-top: 20px;
   overflow: hidden;
 }
-.purina, .alimentos-purina{
+.purina,
+.alimentos-purina {
   width: 75vw;
   max-width: 1000px;
   min-width: 320px;
@@ -396,151 +298,94 @@ nav {
 
 /*---------*/
 
-
- 
-
-
-
-
-   
-   /*---------*/
-  
-  
-  @media screen and (max-width:1160px) {
-    .topnav{
-      margin-left: 0;
-    }
-    section-foot{
-      flex-direction: column;
-    }
-    .iconos-three{
-     
-      justify-content:center;
-   
-    }
-   
-  }
-  
-  @media screen and (min-width: 1160px) {
-    .card {
-        width: calc(50% - 20px); /* Ajusta según el diseño de tu tarjeta */
-    }
-}
-
-@media screen and (max-width: 1088px) and (min-width: 890px) {
-    .card {
-        width: calc(50% - 20px); /* Ajusta según el diseño de tu tarjeta */
-    }
-}
-
-@media screen and (max-width: 889px) {
-    .card {
-        width: calc(100% - 20px); /* Ajusta según el diseño de tu tarjeta */
-    }
-    .iconos-three{
-     
-      justify-content:center;
-   
-    }
-}
-
-  
-  
-  @media screen and (max-width: 890px) {
-  
-    .topnav{
-      margin-left: 0;
-    }
-    .topnav a:not(:first-child), .dropdown .dropbtn {
-      display: none;
-    }
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-    .iconos-three{
-     
-      justify-content:center;
-   
-    }
-  }
-  
-  @media screen and (max-width: 890px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .topnav.responsive .dropdown {float: none;}
-    .topnav.responsive .dropdown-content {position: relative;}
-    .topnav.responsive .dropdown .dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-    .caricaturas-container{
-      display: none;
-    }
-    .fa-cat, .fa-dog{
-   display: none;
-    }
-   
-    
-  .input-registro{
-    max-width: 150px;
-
-    
-  }
-
-
-  }
-  
-  
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:flex-start; 
-    background-image:url(img/peludo.jpg);
-    background-color: var(--color-secundario);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    
- } 
-
-   
-
-
-.text-hero{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-@media screen and (max-width:1160px) {
+@media screen and (max-width: 1160px) {
   .topnav {
     margin-left: 0;
   }
-
   section-foot {
     flex-direction: column;
   }
-
+  .iconos-three {
+    justify-content: center;
+  }
 }
 
+@media screen and (min-width: 1160px) {
+  .card {
+    width: calc(50% - 20px); /* Ajusta según el diseño de tu tarjeta */
+  }
+}
 
+@media screen and (max-width: 1088px) and (min-width: 890px) {
+  .card {
+    width: calc(50% - 20px); /* Ajusta según el diseño de tu tarjeta */
+  }
+}
 
+@media screen and (max-width: 889px) {
+  .card {
+    width: calc(100% - 20px); /* Ajusta según el diseño de tu tarjeta */
+  }
+  .iconos-three {
+    justify-content: center;
+  }
+}
 
+@media screen and (max-width: 890px) {
+  .topnav {
+    margin-left: 0;
+  }
+  .topnav a:not(:first-child),
+  .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .iconos-three {
+    justify-content: center;
+  }
+}
 
+@media screen and (max-width: 890px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {
+    float: none;
+  }
+  .topnav.responsive .dropdown-content {
+    position: relative;
+  }
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  .caricaturas-container {
+    display: none;
+  }
+  .fa-cat,
+  .fa-dog {
+    display: none;
+  }
 
-/*fin mobile*/
+  .input-registro {
+    max-width: 150px;
+  }
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -553,17 +398,12 @@ nav {
   background-position: center;
 }
 
-
-
-
 .text-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-
 }
-
 .registrate-hero {
   text-decoration: none;
   color: var(--color-primario);
@@ -572,13 +412,11 @@ nav {
   padding: 5px;
   margin-top: 20px;
 }
-
-
-
-
+.que-comemos {
+  width: 80%;
+}
 
 /*Main*/
-
 
 .slide {
   width: 100%;
@@ -588,7 +426,6 @@ nav {
 .active {
   display: block;
 }
-
 
 /*Registro*/
 /* .registrate-middle{
@@ -610,71 +447,11 @@ nav {
     background-color: var(--color-quinario);
    }
    */
-     .message {
-            display: none;
-            color: green;
-            margin-top: 10px;
-        }
-     
-      .label{
-        width: max-content;
-        margin: 40px auto;
-        display: grid;
-        grid-template-areas:"input";
-    }
-    .input{
-        grid-area: input;
-        width: 250px;
-        font: inherit;
-        border-radius: 10px;
-        border: 1px solid gray;
-        padding: 0.7rem 1.5rem;
-    }
-    .label__name{
-        grid-area: input;
-        z-index: 100;
-        width: max-content;
-        margin-left: 1rem;
-        padding: 0 0.5rem;
-        align-self: center;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        transition: transform 0.2s;
-        transform-origin: center left;
-    }
-    .input:focus + .label__name,
-    .input:not(:placeholder-shown) + .label__name{
-        transform: translateY(-50%) scale(.6);
-        background-color:white;
-    }
-
-
-
-     .fa-cat, .fa-dog{
-       color: var(--color-terciario);
-     }
-     .cont-registro{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
- 
-     }
-     .contenedorInput{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-
-  
-
-
-
-  /*Ofertas*/
-  .container-ofertas {
-    display: flex;
-    align-items: center;
-  }
+.message {
+  display: none;
+  color: green;
+  margin-top: 10px;
+}
 
 .label {
   width: max-content;
@@ -682,7 +459,6 @@ nav {
   display: grid;
   grid-template-areas: "input";
 }
-
 .input {
   grid-area: input;
   width: 250px;
@@ -691,7 +467,6 @@ nav {
   border: 1px solid gray;
   padding: 0.7rem 1.5rem;
 }
-
 .label__name {
   grid-area: input;
   z-index: 100;
@@ -705,40 +480,26 @@ nav {
   transition: transform 0.2s;
   transform-origin: center left;
 }
-
-.input:focus+.label__name,
-.input:not(:placeholder-shown)+.label__name {
-  transform: translateY(-50%) scale(.6);
+.input:focus + .label__name,
+.input:not(:placeholder-shown) + .label__name {
+  transform: translateY(-50%) scale(0.6);
   background-color: white;
 }
-
-
 
 .fa-cat,
 .fa-dog {
   color: var(--color-terciario);
 }
-
 .cont-registro {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
 }
-
 .contenedorInput {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
 }
-
-.text-h3 {
-  font-size: .95vw;
-}
-
-
-
 
 /*Ofertas*/
 .container-ofertas {
@@ -749,35 +510,88 @@ nav {
   max-width: 1000px;
   min-width: 320px;
   margin: auto;
-
-
 }
 
+.card {
+  width: calc(
+    25% - 20px
+  ); /* 25% del ancho del contenedor menos el espacio entre las tarjetas */
+  max-height: auto;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid var(--color-secundario);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-text {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.5em;
+}
 .next-Btn {
   background-color: transparent;
   border: none;
   width: 200px;
-
 }
-
 .ofertas,
 .ofer-sem {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .ofer-sem h2 {
   color: var(--color-terciario);
 }
 
+/* slider2---------------------- */
 
+.slider {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 15px px 0px rgba(1, 1, 1, 0.8);
+}
+.slider-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: all 0.3s ease-in;
+}
+.sl2 {
+  width: 100%;
+}
+.slider-inner,
+.sl2 {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
 
-
-
-
-
-
+/*Api*/
+.animal-image {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-quinario);
+  color: var(--color-terciario);
+  width: 75vw;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: auto;
+  border: 1px solid var(--color-terciario);
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(1, 1, 1, 0.8);
+}
 
 #dog-image-container {
   margin: 10px;
@@ -799,16 +613,13 @@ nav {
   min-height: 40vh;
   width: 100%;
   padding: 30px 0;
-
 }
 
 .logo-foot {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-
 }
-
 
 .efectivo-transf {
   font-size: 0.7em;
@@ -820,19 +631,13 @@ nav {
   font-size: 0.7em;
   transition: 1s;
 }
-
 .contenedor-foot h6 {
   font-size: 1em;
-
 }
-
 .contenedor-foot p a:hover {
-
   color: var(--color-terciario);
   transition: 0.5s;
-
 }
-
 .nosotros,
 .productos,
 .servicios,
@@ -840,16 +645,11 @@ nav {
   display: flex;
   align-items: start;
   flex-direction: column;
-
-
-
 }
 
 .cancel-compra {
-
   font-size: 0.7em;
 }
-
 .efectivo-transf {
   font-size: 0.7em;
 }
@@ -858,9 +658,6 @@ nav {
   min-height: 40vh;
   width: 100%;
   padding: 30px 0;
-
-
-
 }
 
 .contenedor-foot p a {
@@ -871,21 +668,14 @@ nav {
   color: var(--color-primario);
   font-size: 0.7em;
   transition: 1s;
-
 }
-
 .contenedor-foot h6 {
   font-size: 1em;
-
 }
-
 .contenedor-foot p a:hover {
-
   color: var(--color-terciario);
   transition: 0.5s;
-
 }
-
 .nosotros a,
 .productos a,
 .servicios a,
@@ -901,833 +691,34 @@ nav {
   padding-top: 30px;
 }
 
-
-/* tarjetas nosotros  */
-@media screen and (min-width: 481px) {
-  .tarjeta {
-    width: calc(25% - 20px);
-    /* 25% del ancho del contenedor menos el espacio entre las tarjetas */
-    max-height: 45vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid var(--color-secundario);
-    box-sizing: border-box;
-    border-radius: 10px;
-    align-items: center;
-  }
-
-  .tarjeta-text p:nth-child(2) {
-    text-align: center;
-  }
-
-  .tarjeta img {
-    width: 80%;
-
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-    display: block;
-
-  }
-
-
-
-  .tarjeta-text {
-    margin-top: 10px;
-    text-align: center;
-  }
-}
-
-
-/*Nosotros / quienes somos*/
-.quienes-somos h1 {
-  text-align: center;
-}
-
-.container {
-  width: 100%;
-  display: flex;
-
-  justify-content: center;
-  grid-column-gap: 20px;
-  padding: 10px 32px;
-}
-
-.tarjeta-sobre-mi>img {
-  height: 200px;
-  border-radius: 12px 12px 0 0;
-}
-
-.tarjeta-sobre-mi {
-  display: flex;
-  flex-direction: column;
-  width: 28%;
-  border: 1px solid #0c0b0a;
-  border-radius: 12px;
-}
-
-.tarjeta-texto {
-  height: 272px !important;
-  font-size: 14px;
-  padding: 1.4ch;
-  justify-content: center;
-}
-
-.nosotros {
-  padding: 0 98px;
-
-}
-
-.nosotros h1 {
-  margin: auto 10px;
-}
-
-.nosotros p {
- 
-  margin: 1ch;
-  line-height: 1.5em;
-}
-
-.nosotros-principal {
-  padding: 42px;
-}
-
-/*punto de ventas*/
-
-.punto {
-  display: flex;
-  border-radius: 6px;
-  justify-content: space-between;
-
-
-}
-
-.item {
-  border: 2px solid red;
-  width: 100%;
-  margin: 10px 10px 10px 10px;
-  border-radius: 12px;
-
-}
-
-.punto img {
-  width: 100%;
-  height: 40%;
-  border-radius: 12px;
-}
-
-.item iframe {
-  width: 100%;
-  height: 50%;
-}
-
-.item p {
-  font-size: 18px;
-  font-weight: bold;
-  color: orange;
-  text-align: center;
-}
-
-/*formulario contacto*/
-.contenido-formulario {
-  width: 100%;
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 50px;
-  margin-top: 90px;
-}
-
-.contenido-formulario h2 {
-  color: black;
-  margin-bottom: 15px;
-  font-size: 34px;
-}
-
-.contenido-formulario p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 34px;
-}
-
-.contenido-formulario a {
-  font-size: 18px;
-  display: inline-block;
-  text-decoration: none;
-  width: 100%;
-  margin-bottom: 15px;
-  color: #0c0b0a;
-  font-weight: 700;
-
-}
-
-.contenido-formulario a i {
-  color: orange;
-  margin-right: 10px;
-}
-
-.contenido-formulario form .campo,
-textarea {
-  width: 100%;
-  padding: 15px 10px;
-  font-size: 15px;
-  border: 1px solid #dbdbdb;
-  margin-top: 20px;
-  border: 3px;
-  outline: 0px;
-}
-
-.contenido-formulario form textarea {
-  max-width: 530px;
-  min-width: 530;
-  min-height: 140px;
-  min-height: 150px;
-}
-
-.contenido-formulario .btn-enviar {
-  padding: 15px;
-  margin-bottom: 12px;
-  font-size: 16px;
-  border: none;
-  outline: 0px;
-  background: orange;
-  color: white;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: all 300ms ease;
-}
-
-.contenido-formulario .btn-enviar:hover {
-  background: #e39403;
-}
-
-textarea {
-  border: 1px solid black;
-}
-
-h1 {
-  color: #0c0b0a;
-  text-align: center;
-
-}
-
-/*registro-iniciar-sesión*/
-
-section {
-  background-image: url(img/fondo-gato.jpg);
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-  background-position: center;
-  background-size: cover;
-
-}
-
-
-
-
-input:focus~label,
-input:valid~label {
-  top: -5px;
-}
-
-.input-contenedor input {
-  width: 100%;
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  padding: - 35px 0 5px;
-  color: #fff;
-}
-
-.input-contenedor i {
-  position: absolute;
-  color: #fff;
-  font-size: 1.6rem;
-  top: 18px;
-  right: 10px;
-}
-
-.olvidar {
-  margin: -15px 0 15px;
-  font-size: .9em;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-
-}
-
-.olvidar label input {
-  margin: 3px;
-
-}
-
-.olvidar label a {
-  color: #fff;
-  text-decoration: none;
-  transition: .3s;
-  font-size: .9em;
-
-}
-
-.olvidar label a:hover {
-  text-decoration: underline;
-
-}
-
-button {
-  width: 100%;
-  height: 45px;
-  border-radius: 40px;
-  background: #fff;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  font-size: 1rem;
-  transition: .4s;
-
-}
-
-button:hover {
-  opacity: .9;
-
-}
-
-.registrar {
-  font-size: .8rem;
-  color: #fff;
-  text-align: center;
-  margin: 20px 0 10px;
-
-}
-
-.registrar p a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  transition: .3s;
-}
-
-.registrar p a:hover {
-  text-decoration: underline;
-}
-
-
-/*punto de retiro*/
-
-.punto {
-  display: flex;
-  border-radius: 6px;
-  justify-content: space-between;
-
-
-}
-
-.item {
-  border: 2px solid red;
-  width: 100%;
-  margin: 10px 10px 10px 10px;
-  border-radius: 12px;
-
-}
-
-.punto img {
-  width: 100%;
-  height: 40%;
-  border-radius: 12px;
-}
-
-.item iframe {
-  width: 100%;
-  height: 50%;
-}
-
-.item p {
-  font-size: 18px;
-  font-weight: bold;
-  color: orange;
-  text-align: center;
-}
-
-/*alimento-perro,alimento-gato,accesorio-perro, alimento-gato*/
-
-
-@media screen and (max-width: 890px) {
-
-  .registrate-middle {
-    width: 95vw !important;
-  }
-
-  .contenedor-carousel {
-    margin: 0;
-    width: 100vw;
-  }
-
-  .slide.active {
-    height: 300px;
-  }
-
-  .text-h3 {
-    font-size: 12px !important;
-  }
-
-
-  .topnav {
-    margin-left: 0;
-  }
-
-  .topnav a {
-    padding: 14px 12px;
-  }
-
-  .topnav a:not(:first-child),
-  .dropdown .dropbtn {
-    display: none;
-  }
-
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-
-  .topnav.responsive {
-    position: relative;
-  }
-
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
-  .topnav.responsive .dropdown {
-    float: none;
-  }
-
-  .topnav.responsive .dropdown-content {
-    position: relative;
-  }
-
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-
-  .caricaturas-container {
-    display: none;
-  }
-
-  .fa-cat,
-  .fa-dog {
-    display: none;
-  }
-
-
-  .input-registro {
-    max-width: 150px;
-  }
-
-  .card {
-    width: 40vw;
-    border: 1px solid #a20515;
-    border-radius: 6px;
-    text-align: center;
-  }
-
-  .container-ofertas {
-    flex-wrap: wrap;
-    width: 82vw;
-    justify-content: space-between;
-    row-gap: 16px;
-  }
-
-  #app {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .animal-image {
-    width: 95vw !important;
-  }
-}
-
-@media screen and (min-width: 481px) {
-
-  /*estilos apis*/
-  .animal-image img {
-    height: 256px;
-    width: 396px;
-    border-radius: 6px;
-    padding: 24px;
-  }
-   
-    /* slider2---------------------- */
-
-
-    .slider{
-      overflow: hidden;
-      width: 100%;
-      height: auto;
-      max-width:1000px ;
-      min-width:320px ;
-      margin: auto;
-      margin-bottom: 10px;
-      border-radius: 15px;
-      box-shadow: 0px 15px px 0px rgba(1,1,1,0.8);;
-
-  }
-  .slider-inner{
-      display: flex;
-      flex-wrap: nowrap;
-      transition: all 0.3s ease-in;
-  }
-      .sl2{
-          width: 100%;
-          
-      }
-      .slider-inner, .sl2{
-          aspect-ratio: 16/9;
-          object-fit: cover;
-      }
-
-    
-
-
-  /*Apis/de gatos-perros*/
-  .animal-image {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--color-quinario);
-    color: var(--color-terciario);
-    width: 75vw;
-    max-width: 1000px;
-    min-width: 320px;
-    margin: auto;
-    border: 1px solid var(--color-terciario);
-    border-radius: 15px;
-    box-shadow: 0px 8px 16px 0px rgba(1, 1, 1, 0.8);
-
-  }
-}
-
-@media screen and (max-width: 482px) {
-
-  .tarjeta {
-    width: calc(25% - 20px);
-    /* 25% del ancho del contenedor menos el espacio entre las tarjetas */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid var(--color-secundario);
-    box-sizing: border-box;
-    border-radius: 10px;
-    align-items: center;
-  }
-
-  .tarjeta-text p:nth-child(2) {
-    text-align: center;
-  }
-
-  .tarjeta img {
-    width: 80%;
-
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-    display: block;
-
-  }
-
-
-
-  .tarjeta-text {
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  div.fila {
-    display: flex;
-  }
-
-  .ofertas {
-    background-color: #dbdbdb;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-
-  #container-ofertas {
-
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    justify-content: flex-start;
-    align-items: center;
-
-  }
-
-  .contenedorInput {
-
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    justify-content: flex-start;
-    align-items: center;
-
-  }
-
-  /*Apis/de gatos-perros*/
-  .animal-image {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--color-quinario);
-    color: var(--color-terciario);
-    min-width: 80%;
-    max-width: 100%;
-    min-width: 320px;
-    margin: auto;
-    border: 1px solid var(--color-terciario);
-    border-radius: 15px;
-    box-shadow: 0px 8px 16px 0px rgba(1, 1, 1, 0.8);
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .animal-image img {
-    height: 280px;
-    width: 300px;
-    border-radius: 6px;
-    padding: 24px;
-    width: 100%;
-  }
-
-  .button-mail {
-    width: 250px;
-    height: 48px;
-  }
-
-  .animal-image {
-    width: 480px;
-  }
-
-  .card {
-    width: 100%;
-    border: 1px solid #a20515;
-    border-radius: 6px;
-    max-height: auto;
-    display: flex;
-    padding: 5px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: white;
-  }
-
-  .card img {
-    width: 60%;
-    height: 60%;
-    display: block;
-
-  }
-
-  .card-text {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 1.0em;
-  }
-
-
-  .fila {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .tarjeta {
-    min-width: 250px;
-   
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid var(--color-secundario);
-    box-sizing: border-box;
-    border-radius: 10px;
-    align-items: center;
-
-  }
-
-  .tarjeta-text p:nth-child(2) {
-    text-align: center;
-  }
-
-  .tarjeta img {
-    width: 40%;
-
-    justify-content: center;
-    align-items: center;
-    height: 40%;
-    display: block;
-
-  }
-
-
-
-  .tarjeta-text {
-
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  .tarjeta-text p {
-    font-size: 16px;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  #registrate-middle {
-    width: 320px;
-    height: 200px;
-  }
-
-  .card img {
-    width: 100%;
-    height: auto;
-    display: block;
-
-  }
-
-  .card-text {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 1em;
-  }
-
-
-  .label {
-    margin: 10px 0;
-  }
-
-}
-/*-------------*/
-.tarjeta {
-  width: calc(20% - 15px);
-  /* 25% del ancho del contenedor menos el espacio entre las tarjetas */
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10px;
-  padding: 20px;
-  border: 1px solid var(--color-secundario);
-  box-sizing: border-box;
-  border-radius: 10px;
-  align-items: center;
-}
-
-.tarjeta-text p:nth-child(2) {
-  text-align: center;
-}
-
-.tarjeta img {
-  width: 60%;
-
-  justify-content: center;
-  align-items: center;
-  height: 80%;
-  display: block;
-
-}
-
-
-
-.tarjeta-text {
-  margin-top: 10px;
-  text-align: center;
-}
-div.fila {
-  display: flex;
-  justify-content: center;
-}
-/*------------*/
-.card {
- 
-  width: 100%;
-  /* 25% del ancho del contenedor menos el espacio entre las tarjetas */
-  max-height: 45vh;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-  border: 1px solid var(--color-secundario);
-  box-sizing: border-box;
-  border-radius: 10px;
-  align-items: center;
-}
- 
 /* Tablet */
 @media screen and (max-width: 991px) {
   .card {
-      width: calc(50% - 20px);
+    width: calc(50% - 20px);
   }
 }
 
 /* Celulares */
 @media screen and (max-width: 767px) {
   .card {
-      width: calc(100% - 20px);
+    width: calc(100% - 20px);
   }
-  .slider{
+  .slider {
     max-width: 320px;
-   
   }
-  .iconos-three{
-     
-    justify-content:center;
- 
+  .iconos-three {
+    justify-content: center;
   }
 }
 
-
 .animal-image img {
   width: 300px;
-  height: 168px; 
+  height: 168px;
   object-fit: cover;
   margin: 10px;
   border: 2px solid var(--color-terciario);
   border-radius: 30px;
-  box-shadow: 0px 8px 16px 0px rgba(0,2,2,0.8);
-  
+  box-shadow: 0px 8px 16px 0px rgba(0, 2, 2, 0.8);
 }
 .flexible {
   display: flex;
@@ -1737,87 +728,3 @@ div.fila {
 .animal-image h2 {
   text-align: center;
 }
-
-.card img {
-  width: 80%;
-  height: 60%;
-  display: block;
-
-}
-
-.card-text {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 1.0em;
-}
-
-
-
-
-/*ver como se llama esta imagen*/
-.perro-gato {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-
-}
-/* barra de ofertas */
-.texto-registro {
- border: 2px solid #0c0b0a;
- border-radius: 12px;
- width: 100%;
- text-align: center;
- background-color:#fc4b08;
- padding: 30px;
- margin-top: 10px;
- margin: 25px 0px 30px 0px;
-}
-
-/*--pagina productos--*/
-#productos {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#productos a {
-  width: 50%;
-  height: 300px;
-  background-position: center;
-  background-size: cover;
-  display: grid;
-  place-items: center;
-  text-shadow: white 2px 2px, white 2px -2px, white -2px -2px, white -2px 2px;
-  transition: filter 480ms, color 240ms;
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  transform: scale(1);
-  &:hover {
-    filter: brightness(92%);
-    color: #fc4b08;
-  }
-}
-
-#productos a:nth-child(1) {
-  background-image: url(./img/boton-perro.jpg);
-}
-
-#productos a:nth-child(2) {
-  background-image: url(./img/boton-gato.jpg);
-}
-
-#productos a:nth-child(3) {
-  background-image: url(./img/boton-perro3.jpg);
-}
-
-
-#productos a:nth-child(4) {
-  background-image: url(./img/boton-gato2.jpg);
-}
-
-#productos a>img {
-  width: 100%;
-}
-
-
-
