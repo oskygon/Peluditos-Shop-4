@@ -34,11 +34,16 @@ h1 {
     max-width: 851px;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 1, 0.1);
+    border: 1px solid gray;
 }
+ 
+    
 
 /* Estilos del formulario */
 form {
     max-width: 600px;
+    min-width: 320px;
     margin: 0 auto;
     padding: 20px;
     background-color:#fff;
@@ -94,6 +99,7 @@ button:hover {
 @media (max-width: 600px) {
     form {
         padding: 15px;
+        max-width: 320px;
     }
 
     input[type="text"],
@@ -106,10 +112,20 @@ button:hover {
     }
 
     button {
-        width: 100%;
+        width: 30%;
         font-size: 14px;
+        margin: 0 auto;
+        display: block;
+        background-color: transparent;
     }
     .tyc, label{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
+    .img-container img {
+        max-width: auto; /* Ajusta el valor para dejar espacio en los costados */
+        margin: 0 auto;
+        display: block;
+      
+    }
+   
 }

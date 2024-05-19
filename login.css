@@ -300,12 +300,12 @@ a.google span{
 
 .contactanos {
     position: absolute;
-    bottom: 10px; /* Ajusta esta distancia según sea necesario */
+    bottom: 10px;
     left: 50%;
-    transform: translateX(-70%);
-    background-color:var(--color-quinario); /* Fondo semitransparente para mejor legibilidad */
+    transform: translateX(-80%);
+    background-color:var(--color-quinario);
     color: white;
-    padding: 10px;
+    padding: 3px;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -332,6 +332,9 @@ a.google span{
         align-items: center;
         margin-bottom: 20px;
         height: auto;
+    }
+    .contactanos{
+font-size: .5em;
     }
     
 }
