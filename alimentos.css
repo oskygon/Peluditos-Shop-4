@@ -4,10 +4,11 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f4f4f4;
+  }
    
    
    
-}
 
 
 
@@ -70,12 +71,7 @@ body{
   }
 
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+
 
 h1 {
     text-align: center;
@@ -125,13 +121,36 @@ h1 {
     font-size: 1em;
 }
 
+.contenido-alimento-gato {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tarjeta {
+  flex: 1 1 calc(100% - 20px);
+  margin: 10px;
+  max-width: 100%;
+}
+
 
 /* ------------------------------------------------------------------------------------- */
 
-
+@media (min-width: 900px) {
+  .tarjeta {
+      flex: 1 1 calc(25% - 20px);
+  }
+}
 
   @media (max-width: 600px) {
     .alimentos-cat .food-animal, .alimentos-dog .food-animal {
     max-width: 330px;
 }
+
   }
