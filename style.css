@@ -15,13 +15,7 @@
   scroll-behavior: smooth;
 }
 
-/* Animacion */
-/* @keyframes aparicion{
-      0%{opacity: 0;filter: grayscale(100%);}
-      50%{opacity: 1;}
-      100%{filter: grayscale(0%);}
-      
-    } */
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -312,19 +306,18 @@ nav {
 
 @media screen and (min-width: 1160px) {
   .card {
-    width: calc(50% - 20px); /* Ajusta según el diseño de tu tarjeta */
+    width: calc(50% - 20px); /* Se ajusta  segun la tarjeta  */
   }
 }
 
 @media screen and (max-width: 1088px) and (min-width: 890px) {
   .card {
-    width: calc(50% - 20px); /* Ajusta según el diseño de tu tarjeta */
-  }
+    width: calc(50% - 20px);  }
 }
 
 @media screen and (max-width: 889px) {
   .card {
-    width: calc(100% - 20px); /* Ajusta según el diseño de tu tarjeta */
+    width: calc(100% - 20px); 
   }
   .iconos-three {
     justify-content: center;
@@ -427,26 +420,6 @@ nav {
   display: block;
 }
 
-/*Registro*/
-/* .registrate-middle{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:space-around;
-    gap: 5px;
-    background-color:white;
-    width: 75vw;
-    height: 8vh;
-    max-width:1000px ;
-    min-width:320px ;
-    margin: auto;
-    margin-top: 10px;
-    border-radius: 10px;
-    border: 1px solid var(--color-secundario);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: var(--color-quinario);
-   }
-   */
 .message {
   display: none;
   color: green;

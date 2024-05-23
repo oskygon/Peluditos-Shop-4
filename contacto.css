@@ -122,8 +122,8 @@ button:hover {
         font-size: 0.7rem;
     }
     .img-container img {
-        max-width: auto; /* Ajusta el valor para dejar espacio en los costados */
-        margin: 0 auto;
+        max-width: auto; 
+        margin: 0 auto; /* Ajusta el valor para dejar espacio en los costados */
         display: block;
       
     }

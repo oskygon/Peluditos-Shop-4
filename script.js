@@ -289,7 +289,7 @@ document
       alert("Por favor, ingresa un email válido!!");
     }
   });
-
+  //funcion hecha con vue para el  consumo de apis 
 const { createApp } = Vue;
 
 createApp({
