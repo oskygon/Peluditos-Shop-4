@@ -23,27 +23,25 @@
       <div class="form login">
         <div class="form-content">
           <header>Ingresá</header>
-          <form action="index.html">
+          <form action="#" onsubmit="return false;">
             <div class="field input-field">
               <input
-                type="email"
                 placeholder="Email o nombre de usuario"
-                class="input"
+                class="input nombre-ingreso"
               />
             </div>
 
             <div class="field input-field">
               <input
-                type="password"
                 placeholder="Contraseña"
-                class="password"
+                class="password clave-ingreso"
               />
               <i class="bx bx-hide eye-icon"></i>
             </div>
 
             <div class="form-link">
               <div class="centrarCheckbox">
-                <input type="checkbox" id="recordarMail" name="recordar" ">
+                <input type="checkbox" id="recordarMail" name="recordar">
                 <label for="recordarMail" class="recordarMail"
                   >Recordar nombre de usuario</label
                 >
@@ -54,7 +52,7 @@
             </div>
 
             <div id="btn-ingresa" class="field button-field">
-              <button>Ingresá</button>
+              <button id="ingresa">Ingresá</button>
             </div>
           </form>
 
@@ -92,35 +90,33 @@
       <div class="form signup">
         <div class="form-content">
           <header>Registrate</header>
-          <form action="#">
+          <form action="#" onsubmit="return false;">
             <div class="field input-field">
               <input
-                type="email"
+
                 placeholder="Email o nombre de usuario"
-                class="input"
+                class="input nombre-registro"
               />
             </div>
 
             <div class="field input-field">
               <input
-                type="password"
                 placeholder="Crear contraseña"
-                class="password"
+                class="password clave-registro"
               />
               <i class="bx bx-hide eye-icon"></i>
             </div>
 
             <div class="field input-field">
               <input
-                type="password"
                 placeholder="Confirmar contraseña"
-                class="password"
+                class="password confirmacion"
               />
               <i class="bx bx-hide eye-icon"></i>
             </div>
 
             <div class="field button-field">
-              <button>Registrate</button>
+              <button id="registrate">Registrate</button>
             </div>
           </form>
 
@@ -153,6 +149,7 @@
         </div>
       </div>
     </section>
+    
 
     <footer></footer>
     <script src="script.js"></script>
