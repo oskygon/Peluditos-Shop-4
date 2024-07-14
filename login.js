@@ -1,5 +1,3 @@
-
-
 const forms = document.querySelector(".forms"),
     pwShowHide = document.querySelectorAll(".eye-icon"),
     links = document.querySelectorAll(".link");
@@ -42,7 +40,6 @@ document.getElementById("btn-ingresa").addEventListener("click", function () {
         localStorage.removeItem("email");
         localStorage.removeItem("recordar");
     }
-
 });
 
 // Comprobar si hay datos guardados en localStorage al cargar la página
@@ -69,27 +66,39 @@ window.addEventListener("load", function () {
 const submit = document.querySelector("#ingresa");
 const submit2 = document.querySelector("#registrate");
 
-const emitirError = validacion => validacion()? alert(validacion()) : document.location.href = "index.html";
+const emitirError = validacion => {
+    const error = validacion();
+    if (error) {
+        alert(error);
+    } else {
+        const nombre = document.querySelector(".nombre-ingreso").value;
+        const clave = document.querySelector(".clave-ingreso").value;
+        if (nombre === "admin" && clave === "admin@A12345") {
+            document.location.href = "https://backendpeluditos.pythonanywhere.com/admin";
+        } else {
+            document.location.href = "index.html";
+        }
+    }
+};
 
 const comprobarLimite = (cadena, inicio, final) => !cadena.split("").some(letra => letra >= inicio && final >= letra);
 
-const validarNombre = nombre => nombre == ""? " - Ingrese nombre de usuario\n" : "";
-const validarConfirmacion = (confirmacion, clave) => confirmacion != clave? " - Las claves no corresponden": "";
+const validarNombre = nombre => nombre == "" ? " - Ingrese nombre de usuario\n" : "";
+const validarConfirmacion = (confirmacion, clave) => confirmacion != clave ? " - Las claves no corresponden" : "";
 function validarClave(clave) {
     let mensaje = "";
     if (clave.length < 12)
-        mensaje += " - Ingrese una clave con minimo 12 caracteres\n";
+        mensaje += " - Ingrese una clave con mínimo 12 caracteres\n";
     if (comprobarLimite(clave, "A", "Z"))
-        mensaje += " - Ingrese una clave con una mayuscula\n";
+        mensaje += " - Ingrese una clave con una mayúscula\n";
     if (comprobarLimite(clave, "a", "z"))
-        mensaje += " - Ingrese una clave con una minuscula\n";
+        mensaje += " - Ingrese una clave con una minúscula\n";
     if (!`@#_."[]{}`.split("").some(caracter => clave.includes(caracter)))
-        mensaje += " - Ingrese una clave con un caracter especial\n";
+        mensaje += " - Ingrese una clave con un carácter especial\n";
     if (comprobarLimite(clave, "0", "9"))
-        mensaje += " - Ingrese una clave con un numero\n";
+        mensaje += " - Ingrese una clave con un número\n";
     return mensaje;
 }
-
 
 let validarIngreso = submit => () => {
     let { value: nombre } = document.querySelector(".nombre-" + submit);
@@ -103,7 +112,7 @@ const validarRegistro = submit => () => {
     return validarIngreso(submit)() + validarConfirmacion(confirmacion, clave);
 }
 
-const validar = submit => () => emitirError({ ingreso: validarIngreso(submit), registro: validarRegistro(submit)}[submit]);
+const validar = submit => () => emitirError({ ingreso: validarIngreso(submit), registro: validarRegistro(submit) }[submit]);
 
 submit.addEventListener("click", validar("ingreso"));
-submit2.addEventListener("click", validar("registro"))
+submit2.addEventListener("click", validar("registro"));
